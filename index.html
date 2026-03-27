@@ -9,60 +9,44 @@
 :root{--v:#1a6b3a;--v2:#2d9e58;--v3:#0f3d20;--d:#e8a020;--d2:#f5c050;--g:#f2f5f2;--g2:#dde5dd;--t:#1c2b1e;--r:#c0392b;--mp:#009ee3;--spei:#cc0000;}
 *{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent;}
 body{font-family:'Nunito',sans-serif;background:var(--v3);color:var(--t);min-height:100vh;overscroll-behavior:none;}
-
 header{background:linear-gradient(160deg,var(--v3) 0%,var(--v) 100%);padding:14px 18px 10px;position:sticky;top:0;z-index:100;box-shadow:0 3px 18px rgba(0,0,0,.4);}
 .hrow{display:flex;align-items:center;justify-content:space-between;max-width:560px;margin:auto;}
 .logo{display:flex;align-items:center;gap:11px;}
 .lball{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--d2),var(--d));display:flex;align-items:center;justify-content:center;font-size:22px;flex-shrink:0;box-shadow:0 3px 10px rgba(0,0,0,.3);}
 .logo h1{font-family:'Oswald',sans-serif;font-size:1.2rem;letter-spacing:1.5px;color:var(--d2);line-height:1.1;}
 .logo p{font-size:.65rem;color:#9ecba8;letter-spacing:1.5px;text-transform:uppercase;}
-.abtn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#9ecba8;font-family:'Nunito',sans-serif;font-size:.78rem;padding:6px 13px;border-radius:18px;cursor:pointer;transition:.2s;}
-.abtn:hover{background:rgba(255,255,255,.2);}
+.abtn{background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:#9ecba8;font-family:'Nunito',sans-serif;font-size:.78rem;padding:6px 13px;border-radius:18px;cursor:pointer;}
 .tbanner{max-width:560px;margin:10px auto 0;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);border-radius:10px;padding:8px 14px;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
 .tbanner label{font-size:.72rem;color:#9ecba8;text-transform:uppercase;letter-spacing:1px;}
 .tbanner select{flex:1;min-width:150px;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);color:white;padding:5px 10px;border-radius:7px;font-family:'Nunito',sans-serif;font-size:.88rem;}
 .tbanner select option{background:var(--v3);}
 .epill{padding:3px 10px;border-radius:10px;font-size:.72rem;font-weight:800;text-transform:uppercase;display:none;}
-.p-abierto{background:#d4edda;color:#155724;}
-.p-en-curso{background:#fff3cd;color:#856404;}
-.p-cerrado{background:#f8d7da;color:#721c24;}
-
-main{max-width:560px;margin:0 auto;padding:18px 14px 80px;}
-
+.p-abierto{background:#d4edda;color:#155724;}.p-en-curso{background:#fff3cd;color:#856404;}.p-cerrado{background:#f8d7da;color:#721c24;}
+main{max-width:560px;margin:0 auto;padding:18px 14px 85px;}
 .tbar{position:fixed;bottom:0;left:0;right:0;background:var(--v3);border-top:1px solid rgba(255,255,255,.12);display:flex;z-index:99;padding:4px 0 env(safe-area-inset-bottom,4px);}
-.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:7px 2px;cursor:pointer;color:#7aab82;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px;border:none;background:none;transition:.15s;gap:2px;font-family:'Nunito',sans-serif;}
-.tab .ti{font-size:1.15rem;}
+.tab{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:7px 2px;cursor:pointer;color:#7aab82;font-size:.55rem;font-weight:700;text-transform:uppercase;letter-spacing:.3px;border:none;background:none;gap:2px;font-family:'Nunito',sans-serif;}
+.tab .ti{font-size:1.2rem;}
 .tab.active{color:var(--d2);}
 .tab.active .ti{filter:drop-shadow(0 0 6px rgba(245,192,80,.7));}
-
 .card{background:white;border-radius:18px;padding:20px;margin-bottom:16px;box-shadow:0 4px 18px rgba(0,0,0,.14);}
 .ctitle{font-family:'Oswald',sans-serif;font-size:1.1rem;color:var(--v3);margin-bottom:16px;display:flex;align-items:center;gap:8px;}
-.sec{display:none;}
-.sec.active{display:block;animation:fu .22s ease;}
+.sec{display:none;}.sec.active{display:block;animation:fu .22s ease;}
 @keyframes fu{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:translateY(0);}}
-
 .fg{margin-bottom:13px;}
 .fg label{display:block;font-size:.78rem;font-weight:800;color:var(--v3);margin-bottom:5px;text-transform:uppercase;letter-spacing:.5px;}
-.fg input,.fg select{width:100%;padding:13px 15px;border:2px solid var(--g2);border-radius:11px;font-family:'Nunito',sans-serif;font-size:1rem;color:var(--t);background:var(--g);transition:border-color .2s;-webkit-appearance:none;}
-.fg input:focus,.fg select:focus{outline:none;border-color:var(--v2);background:white;}
-
-.btn{padding:14px 22px;border-radius:12px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:.95rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:7px;width:100%;}
-.bv{background:var(--v);color:white;}.bv:hover{background:var(--v2);}
-.bd{background:var(--d);color:var(--v3);}.bd:hover{background:var(--d2);}
+.fg input,.fg select,.fg textarea{width:100%;padding:12px 15px;border:2px solid var(--g2);border-radius:11px;font-family:'Nunito',sans-serif;font-size:1rem;color:var(--t);background:var(--g);transition:border-color .2s;-webkit-appearance:none;}
+.fg textarea{resize:none;height:65px;}
+.fg input:focus,.fg select:focus,.fg textarea:focus{outline:none;border-color:var(--v2);background:white;}
+.btn{padding:13px 20px;border-radius:12px;border:none;cursor:pointer;font-family:'Nunito',sans-serif;font-weight:800;font-size:.95rem;transition:.18s;display:flex;align-items:center;justify-content:center;gap:7px;width:100%;}
+.bv{background:var(--v);color:white;}.bv:active{background:var(--v2);}
+.bd{background:var(--d);color:var(--v3);}
 .br{background:var(--r);color:white;}
-.bmp{background:var(--mp);color:white;}.bmp:hover{background:#007bb5;}
-.bspei{background:var(--spei);color:white;}.bspei:hover{background:#a00000;}
-.bsm{padding:7px 14px;font-size:.8rem;border-radius:8px;width:auto;}
-
-.alert{padding:11px 14px;border-radius:11px;font-size:.88rem;margin-bottom:13px;display:flex;align-items:flex-start;gap:8px;line-height:1.5;}
-.aok{background:#d4edda;color:#155724;}
-.aerr{background:#f8d7da;color:#721c24;}
-.ainf{background:#d1ecf1;color:#0c5460;}
-.award{background:#fff3cd;color:#856404;border:1px solid #ffc107;}
-
-.prow{display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border-radius:11px;background:var(--g);margin-bottom:8px;gap:8px;flex-wrap:wrap;}
-.pinfo strong{font-size:.95rem;}.pinfo small{display:block;color:#666;font-size:.75rem;margin-top:1px;}
-
+.bmp{background:var(--mp);color:white;}
+.bsm{padding:7px 14px;font-size:.8rem;border-radius:8px;width:auto;display:inline-flex;}
+.bxs{padding:4px 9px;font-size:.73rem;border-radius:7px;width:auto;display:inline-flex;}
+.alert{padding:11px 14px;border-radius:11px;font-size:.88rem;margin-bottom:13px;line-height:1.6;}
+.aok{background:#d4edda;color:#155724;}.aerr{background:#f8d7da;color:#721c24;}
+.ainf{background:#d1ecf1;color:#0c5460;}.award{background:#fff3cd;color:#856404;}
 .badge{display:inline-flex;align-items:center;gap:3px;padding:3px 10px;border-radius:12px;font-size:.74rem;font-weight:800;text-transform:uppercase;white-space:nowrap;}
 .bA{background:#fff3cd;color:#856404;border:1.5px solid #ffc107;}
 .bB{background:#d1ecf1;color:#0c5460;border:1.5px solid #17a2b8;}
@@ -70,67 +54,57 @@ main{max-width:560px;margin:0 auto;padding:18px 14px 80px;}
 .bSin{background:#e9ecef;color:#6c757d;border:1.5px solid #adb5bd;}
 .bPagado{background:#d4edda;color:#155724;border:1.5px solid #28a745;}
 .bPendiente{background:#fff3cd;color:#856404;border:1.5px solid #ffc107;}
-
-.metodo-selector{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:16px;}
-.metodo-btn{border-radius:14px;border:2.5px solid var(--g2);background:var(--g);padding:14px 10px;text-align:center;cursor:pointer;transition:.2s;font-family:'Nunito',sans-serif;}
-.metodo-btn:hover{border-color:#aaa;}
-.metodo-btn.selected-spei{border-color:var(--spei);background:#fff0f0;}
-.metodo-btn.selected-mp{border-color:var(--mp);background:#e8f6fd;}
-.metodo-btn .mi{font-size:1.8rem;display:block;margin-bottom:5px;}
-.metodo-btn .mn{font-weight:800;font-size:.85rem;color:var(--t);}
-.metodo-btn .ms{font-size:.72rem;color:#888;margin-top:2px;}
-
-.pago-box{border-radius:14px;padding:18px;margin-bottom:14px;}
-.pago-box-spei{background:#fff5f5;border:2px solid var(--spei);}
-.pago-box-mp{background:#e8f6fd;border:2px solid var(--mp);}
-.pago-titulo{font-family:'Oswald',sans-serif;font-size:1rem;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-.pago-titulo-spei{color:var(--spei);}
-.pago-titulo-mp{color:var(--mp);}
-
-.dato-row{display:flex;align-items:center;justify-content:space-between;padding:9px 12px;background:white;border-radius:9px;margin-bottom:7px;gap:8px;}
-.dato-label{font-size:.75rem;color:#888;font-weight:700;text-transform:uppercase;letter-spacing:.5px;flex-shrink:0;}
-.dato-valor{font-weight:800;font-size:.92rem;color:var(--t);text-align:right;word-break:break-all;}
-.copy-btn{background:var(--g2);border:none;border-radius:7px;padding:5px 10px;font-size:.75rem;font-weight:800;cursor:pointer;color:var(--v3);flex-shrink:0;font-family:'Nunito',sans-serif;transition:.15s;}
-.copy-btn:hover{background:var(--v2);color:white;}
+.prow{display:flex;align-items:center;justify-content:space-between;padding:11px 13px;border-radius:11px;background:var(--g);margin-bottom:8px;gap:8px;flex-wrap:wrap;}
+.pinfo strong{font-size:.95rem;}.pinfo small{display:block;color:#666;font-size:.75rem;margin-top:1px;}
+.pago-box{background:#f0faf4;border:2px solid var(--v2);border-radius:14px;padding:18px;margin-top:16px;}
+.pago-box h3{font-family:'Oswald',sans-serif;color:var(--v3);font-size:1rem;margin-bottom:4px;}
+.monto-g{font-family:'Oswald',sans-serif;font-size:2.2rem;font-weight:700;color:var(--v3);text-align:center;margin:8px 0 2px;}
+.monto-sub{text-align:center;font-size:.8rem;color:#888;margin-bottom:14px;}
+.met-sel{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-bottom:12px;}
+.mbtn{border-radius:12px;border:2.5px solid var(--g2);background:white;padding:12px 8px;text-align:center;cursor:pointer;font-family:'Nunito',sans-serif;transition:.15s;}
+.mbtn .mi{font-size:1.6rem;display:block;margin-bottom:4px;}
+.mbtn .mn{font-weight:800;font-size:.82rem;color:var(--t);}
+.mbtn .ms{font-size:.7rem;color:#888;}
+.mbtn.sel-spei{border-color:var(--spei);background:#fff0f0;}
+.mbtn.sel-mp{border-color:var(--mp);background:#e8f6fd;}
+.det-spei{background:#fff5f5;border:2px solid var(--spei);border-radius:11px;padding:14px;margin-bottom:10px;}
+.det-mp{background:#e8f6fd;border:2px solid var(--mp);border-radius:11px;padding:14px;margin-bottom:10px;}
+.det-titulo{font-family:'Oswald',sans-serif;font-size:.95rem;margin-bottom:10px;}
+.det-titulo-spei{color:var(--spei);}.det-titulo-mp{color:var(--mp);}
+.dato-row{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;background:white;border-radius:8px;margin-bottom:6px;gap:8px;}
+.dato-label{font-size:.72rem;color:#888;font-weight:700;text-transform:uppercase;flex-shrink:0;}
+.dato-valor{font-weight:800;font-size:.88rem;color:var(--t);text-align:right;word-break:break-all;}
+.copy-btn{background:var(--g2);border:none;border-radius:6px;padding:4px 9px;font-size:.72rem;font-weight:800;cursor:pointer;color:var(--v3);font-family:'Nunito',sans-serif;flex-shrink:0;}
 .copy-btn.copied{background:var(--v);color:white;}
-
-.monto-grande{font-family:'Oswald',sans-serif;font-size:2.2rem;font-weight:700;color:var(--v3);text-align:center;margin:6px 0 2px;}
-.monto-sub{text-align:center;font-size:.8rem;color:#888;margin-bottom:12px;}
-.instrucciones{background:white;border-radius:10px;padding:12px 14px;margin-top:10px;}
-.instrucciones p{font-size:.82rem;color:#555;line-height:1.5;}
-.instrucciones strong{color:var(--t);}
-.divider{border:none;border-top:1px solid var(--g2);margin:14px 0;}
-.pago-status{display:flex;align-items:center;justify-content:space-between;padding:10px 13px;border-radius:10px;background:var(--g);margin-bottom:8px;flex-wrap:wrap;gap:6px;}
-.pago-status .pn{font-weight:700;font-size:.92rem;}
-.pago-status small{color:#666;font-size:.75rem;}
-
-.vcard{background:var(--g);border-radius:13px;padding:15px;margin-bottom:10px;}
-.vpname{font-weight:800;color:var(--v3);font-size:.97rem;margin-bottom:10px;}
-.srow{display:flex;align-items:center;gap:10px;}
-.srow input[type=range]{flex:1;accent-color:var(--v);height:6px;cursor:pointer;}
-.sbox{min-width:48px;text-align:center;font-family:'Oswald',sans-serif;font-size:1.5rem;font-weight:700;color:var(--v);background:white;border:2px solid var(--v2);border-radius:9px;padding:2px 4px;}
-.slabels{display:flex;justify-content:space-between;font-size:.68rem;color:#999;margin-top:4px;}
-.yv-banner{background:#d4edda;border-radius:11px;padding:12px 14px;color:#155724;font-size:.88rem;margin-bottom:12px;display:flex;align-items:center;gap:8px;}
-
-.rtable{width:100%;border-collapse:collapse;}
-.rtable th{background:var(--v3);color:white;padding:9px 10px;text-align:left;font-family:'Oswald',sans-serif;font-size:.82rem;}
-.rtable th:first-child{border-radius:8px 0 0 0;}.rtable th:last-child{border-radius:0 8px 0 0;}
-.rtable td{padding:9px 10px;border-bottom:1px solid var(--g2);font-size:.85rem;}
-.rtable tr:nth-child(even) td{background:var(--g);}
-.sbw{display:flex;align-items:center;gap:7px;}
-.sbar{height:9px;border-radius:5px;background:linear-gradient(90deg,var(--v2),var(--d));min-width:3px;}
-.snum{font-family:'Oswald',sans-serif;font-weight:700;color:var(--v3);font-size:1rem;}
-.cleg{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:14px;}
-
-.bcat{margin-bottom:22px;}
-.bhdr{display:flex;align-items:center;gap:8px;margin-bottom:12px;}
-.bhdr h3{font-family:'Oswald',sans-serif;font-size:1rem;color:var(--v3);}
-.mgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:9px;}
-.mcard{background:var(--g);border-radius:10px;padding:11px 13px;border-left:4px solid var(--v2);}
-.mlabel{font-size:.68rem;color:#999;text-transform:uppercase;letter-spacing:1px;margin-bottom:6px;}
-.mp-p{padding:6px 9px;background:white;border-radius:7px;font-weight:700;font-size:.88rem;color:var(--t);margin-bottom:4px;}
-.mvs{text-align:center;font-family:'Oswald',sans-serif;color:var(--d);font-size:.82rem;margin:2px 0;}
-
+.cal-card{background:var(--g);border-radius:12px;padding:13px;margin-bottom:9px;}
+.cal-nombre{font-weight:800;color:var(--v3);font-size:.95rem;margin-bottom:9px;}
+.cat-btns{display:flex;gap:6px;}
+.cbtn{flex:1;padding:9px 4px;border-radius:9px;border:2.5px solid var(--g2);background:white;font-family:'Nunito',sans-serif;font-weight:800;font-size:.85rem;cursor:pointer;text-align:center;}
+.cbtn.sel-A{border-color:#ffc107;background:#fff3cd;color:#856404;}
+.cbtn.sel-B{border-color:#17a2b8;background:#d1ecf1;color:#0c5460;}
+.cbtn.sel-C{border-color:#28a745;background:#d4edda;color:#155724;}
+.cbtn.sel-X{border-color:#adb5bd;background:#e9ecef;color:#6c757d;}
+.ya-voto{background:#d4edda;border-radius:10px;padding:11px 13px;color:#155724;font-size:.88rem;margin-bottom:12px;}
+.cat-section{margin-bottom:20px;}
+.cat-header{font-family:'Oswald',sans-serif;font-size:1rem;color:white;background:var(--v3);padding:9px 14px;border-radius:10px;margin-bottom:12px;}
+.grupo-blk{background:white;border-radius:14px;padding:14px;margin-bottom:12px;box-shadow:0 2px 10px rgba(0,0,0,.08);}
+.grupo-nombre{font-family:'Oswald',sans-serif;font-size:.9rem;color:var(--v3);margin-bottom:10px;}
+.tabla-pos{width:100%;border-collapse:collapse;margin-bottom:10px;font-size:.8rem;}
+.tabla-pos th{background:var(--v3);color:white;padding:6px 7px;text-align:center;}
+.tabla-pos th:first-child{text-align:left;border-radius:6px 0 0 0;}
+.tabla-pos th:last-child{border-radius:0 6px 0 0;}
+.tabla-pos td{padding:6px 7px;border-bottom:1px solid var(--g2);text-align:center;}
+.tabla-pos td:first-child{text-align:left;font-weight:700;font-size:.78rem;}
+.tabla-pos tr.clasifica td{background:#d4edda;}
+.match-item{display:flex;align-items:center;justify-content:space-between;padding:8px 10px;border-radius:9px;background:var(--g);margin-bottom:6px;gap:8px;}
+.match-teams{font-size:.83rem;font-weight:700;flex:1;line-height:1.4;}
+.match-score{font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:700;color:var(--v3);white-space:nowrap;}
+.match-pend{font-size:.75rem;color:#aaa;font-style:italic;}
+.semi-card{background:white;border-radius:12px;padding:14px;margin-bottom:10px;box-shadow:0 2px 10px rgba(0,0,0,.08);}
+.semi-label{font-family:'Oswald',sans-serif;font-size:.88rem;color:var(--v3);margin-bottom:8px;}
+.campeon-banner{background:linear-gradient(135deg,var(--d),var(--d2));border-radius:16px;padding:22px;text-align:center;margin-bottom:16px;}
+.campeon-banner .ct{font-family:'Oswald',sans-serif;font-size:1.1rem;color:var(--v3);}
+.campeon-banner .cn{font-family:'Oswald',sans-serif;font-size:1.7rem;font-weight:700;color:var(--v3);margin:4px 0;}
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:200;align-items:flex-end;justify-content:center;}
 .overlay.active{display:flex;}
 .asheet{background:white;border-radius:22px 22px 0 0;padding:24px 20px 32px;width:100%;max-width:560px;max-height:90vh;overflow-y:auto;position:relative;}
@@ -138,140 +112,81 @@ main{max-width:560px;margin:0 auto;padding:18px 14px 80px;}
 .asheet h2{font-family:'Oswald',sans-serif;color:var(--v3);font-size:1.3rem;margin-bottom:16px;}
 .cx{position:absolute;top:18px;right:18px;background:none;border:none;font-size:1.4rem;cursor:pointer;color:#aaa;}
 .adivider{border:none;border-top:2px solid var(--g2);margin:16px 0;}
-.slabel{font-family:'Oswald',sans-serif;color:var(--v3);font-size:.95rem;margin-bottom:10px;}
-.g2c{display:grid;grid-template-columns:1fr 1fr;gap:11px;}
-
+.slabel{font-family:'Oswald',sans-serif;color:var(--v3);font-size:.95rem;margin-bottom:8px;display:block;}
+.g2c{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.score-inp{width:52px;padding:7px;text-align:center;font-family:'Oswald',sans-serif;font-size:1.1rem;font-weight:700;border:2px solid var(--g2);border-radius:8px;background:white;color:var(--t);}
+.score-inp:focus{outline:none;border-color:var(--v2);}
 .empty{text-align:center;padding:34px 16px;color:#999;}
-.empty .ei{font-size:2.8rem;margin-bottom:10px;}.empty p{font-size:.9rem;}
-
-.toast{position:fixed;bottom:80px;left:50%;transform:translateX(-50%);background:var(--v3);color:white;padding:10px 20px;border-radius:20px;font-size:.85rem;font-weight:700;z-index:500;opacity:0;transition:opacity .3s;pointer-events:none;}
+.empty .ei{font-size:2.8rem;margin-bottom:10px;}
+.empty p{font-size:.9rem;line-height:1.5;}
+.toast{position:fixed;bottom:84px;left:50%;transform:translateX(-50%);background:var(--v3);color:white;padding:10px 20px;border-radius:20px;font-size:.85rem;font-weight:700;z-index:500;opacity:0;transition:opacity .3s;pointer-events:none;white-space:nowrap;}
 .toast.show{opacity:1;}
-
-/* Loading overlay */
-#loading-overlay{position:fixed;inset:0;background:var(--v3);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:999;color:white;gap:14px;}
-#loading-overlay .lball2{width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--d2),var(--d));display:flex;align-items:center;justify-content:center;font-size:30px;animation:pulse 1.2s ease-in-out infinite;}
+#loading-overlay{position:fixed;inset:0;background:var(--v3);display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:999;gap:14px;}
+#loading-overlay .lb2{width:64px;height:64px;border-radius:50%;background:radial-gradient(circle at 35% 35%,var(--d2),var(--d));display:flex;align-items:center;justify-content:center;font-size:30px;animation:pulse 1.2s ease-in-out infinite;}
 @keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.12);}}
 #loading-overlay p{font-family:'Oswald',sans-serif;font-size:1rem;letter-spacing:2px;color:var(--d2);}
 </style>
 </head>
 <body>
 
-<!-- Pantalla de carga -->
-<div id="loading-overlay">
-  <div class="lball2">🤚</div>
-  <p>CARGANDO...</p>
-</div>
-
-<div class="toast" id="toast">✅ Copiado</div>
+<div id="loading-overlay"><div class="lb2">🤚</div><p>CARGANDO...</p></div>
+<div class="toast" id="toast"></div>
 
 <header>
   <div class="hrow">
     <div class="logo">
       <div class="lball">🤚</div>
-      <div>
-        <h1>FRONTÓN HERNÁNDEZ</h1>
-        <p>Pelota Mano · Tultitlán, Edo. Méx.</p>
-      </div>
+      <div><h1>FRONTÓN HERNÁNDEZ</h1><p>Pelota Mano · Tultitlán, Edo. Méx.</p></div>
     </div>
     <button class="abtn" onclick="abrirAdmin()">⚙️ Admin</button>
   </div>
   <div class="tbanner">
-    <label>🏆 Torneo:</label>
-    <select id="tSel" onchange="selTorneo()">
-      <option value="">— Elige un torneo —</option>
-    </select>
+    <label>🏆</label>
+    <select id="tSel" onchange="selTorneo()"><option value="">— Elige un torneo —</option></select>
     <span id="epill" class="epill"></span>
   </div>
 </header>
 
 <main>
 
-  <!-- INSCRIPCIÓN -->
-  <div id="s-inscripcion" class="sec active">
+  <!-- INSCRIBIRSE -->
+  <div id="s-inscribirse" class="sec active">
     <div class="card">
-      <div class="ctitle">📝 Inscríbete al Torneo</div>
+      <div class="ctitle">📝 Inscríbete al torneo</div>
       <div id="av-ins"></div>
-      <div class="fg">
-        <label>Tu nombre completo</label>
-        <input id="ins-n" type="text" placeholder="Ej: Carlos Ramírez López" autocomplete="name"/>
-      </div>
-      <div class="fg">
-        <label>Teléfono (WhatsApp)</label>
-        <input id="ins-t" type="tel" placeholder="55 1234 5678" autocomplete="tel"/>
-      </div>
-      <div class="fg">
-        <label>¿Cuántos años llevas jugando pelota mano?</label>
-        <select id="ins-e">
-          <option value="Menos de 1 año">Menos de 1 año</option>
-          <option value="1 a 3 años">1 a 3 años</option>
-          <option value="3 a 5 años" selected>3 a 5 años</option>
-          <option value="Más de 5 años">Más de 5 años</option>
-        </select>
-      </div>
-      <button class="btn bv" onclick="inscribirse()">✅ Inscribirme</button>
-    </div>
-  </div>
-
-  <!-- PAGO -->
-  <div id="s-pago" class="sec">
-    <div class="card">
-      <div class="ctitle">💳 Pagar Inscripción</div>
-      <div id="pago-aviso"></div>
-      <div class="fg">
-        <label>¿Quién va a pagar?</label>
-        <select id="pago-sel" onchange="mostrarPago()">
-          <option value="">Selecciona tu nombre...</option>
-        </select>
-      </div>
-      <div id="pago-cuerpo" style="display:none;">
-        <div class="monto-grande" id="pago-monto">$200 MXN</div>
-        <div class="monto-sub">Inscripción — Frontón Hernández</div>
-        <p style="font-size:.82rem;font-weight:800;color:var(--v3);margin-bottom:10px;text-align:center;">¿Cómo quieres pagar?</p>
-        <div class="metodo-selector">
-          <div class="metodo-btn" id="mbtn-spei" onclick="elegirMetodo('spei')">
-            <span class="mi">🏦</span>
-            <div class="mn">Transferencia</div>
-            <div class="ms">SPEI · Sin comisión</div>
-          </div>
-          <div class="metodo-btn" id="mbtn-mp" onclick="elegirMetodo('mp')">
-            <span class="mi">💳</span>
-            <div class="mn">Mercado Pago</div>
-            <div class="ms">Tarjeta · OXXO · Saldo</div>
-          </div>
+      <div id="form-ins">
+        <div class="fg">
+          <label>Tu nombre completo</label>
+          <input id="ins-n" type="text" placeholder="Ej: Carlos Ramírez" autocomplete="name"/>
         </div>
-        <div id="detalle-spei" style="display:none;">
-          <div class="pago-box pago-box-spei">
-            <div class="pago-titulo pago-titulo-spei">🏦 Transferencia bancaria (SPEI)</div>
-            <div class="dato-row"><span class="dato-label">Banco</span><span class="dato-valor" id="spei-banco">—</span></div>
-            <div class="dato-row"><span class="dato-label">Beneficiario</span><span class="dato-valor" id="spei-nombre">—</span></div>
-            <div class="dato-row"><span class="dato-label">CLABE (18 dígitos)</span><span class="dato-valor" id="spei-clabe">—</span><button class="copy-btn" id="copy-clabe" onclick="copiar('spei-clabe','copy-clabe')">Copiar</button></div>
-            <div class="dato-row"><span class="dato-label">Número de cuenta</span><span class="dato-valor" id="spei-cuenta">—</span><button class="copy-btn" id="copy-cuenta" onclick="copiar('spei-cuenta','copy-cuenta')">Copiar</button></div>
-            <div class="dato-row"><span class="dato-label">Concepto</span><span class="dato-valor" id="spei-concepto">Inscripción frontón</span></div>
-            <div class="instrucciones" style="margin-top:12px;">
-              <p>1. Abre tu app bancaria o CoDi.<br>2. Haz la transferencia por el monto exacto.<br>3. En el concepto escribe tu <strong>nombre completo</strong>.<br>4. Guarda tu comprobante y mándalo por <strong>WhatsApp al organizador</strong>.<br>5. El organizador confirma tu pago en la app.</p>
-            </div>
-          </div>
+        <div class="fg">
+          <label>Tu teléfono (WhatsApp)</label>
+          <input id="ins-t" type="tel" placeholder="55 1234 5678" autocomplete="tel"/>
         </div>
-        <div id="detalle-mp" style="display:none;">
-          <div class="pago-box pago-box-mp">
-            <div class="pago-titulo pago-titulo-mp">💳 Pagar con Mercado Pago</div>
-            <div style="display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:14px;">
-              <span style="background:white;border:1px solid #ddd;border-radius:8px;padding:4px 10px;font-size:.72rem;font-weight:700;color:#555;">💳 Tarjeta débito/crédito</span>
-              <span style="background:white;border:1px solid #ddd;border-radius:8px;padding:4px 10px;font-size:.72rem;font-weight:700;color:#555;">🏪 OXXO Pay</span>
-              <span style="background:white;border:1px solid #ddd;border-radius:8px;padding:4px 10px;font-size:.72rem;font-weight:700;color:#555;">💰 Saldo MP</span>
-              <span style="background:white;border:1px solid #ddd;border-radius:8px;padding:4px 10px;font-size:.72rem;font-weight:700;color:#555;">🏦 Transferencia</span>
-            </div>
-            <button class="btn bmp" onclick="irAMercadoPago()">Pagar con Mercado Pago →</button>
-            <div class="instrucciones" style="margin-top:10px;">
-              <p>Al tocar el botón serás llevado a la página de Mercado Pago. Después avísale al organizador por WhatsApp para que confirme tu pago en la app.</p>
-            </div>
-          </div>
+        <div class="fg">
+          <label>¿Con quién quieres jugar? (opcional)</label>
+          <textarea id="ins-comp" placeholder="Ej: Quiero jugar con Juan Pérez"></textarea>
         </div>
+        <div class="fg">
+          <label>¿Cuántos años llevas jugando pelota mano?</label>
+          <select id="ins-e">
+            <option value="Menos de 1 año">Menos de 1 año</option>
+            <option value="1 a 3 años">1 a 3 años</option>
+            <option value="3 a 5 años" selected>3 a 5 años</option>
+            <option value="Más de 5 años">Más de 5 años</option>
+          </select>
+        </div>
+        <div class="fg">
+          <label>¿En qué categoría crees que juegas?</label>
+          <select id="ins-cat">
+            <option value="A">A — Avanzado</option>
+            <option value="B" selected>B — Intermedio</option>
+            <option value="C">C — Principiante</option>
+          </select>
+        </div>
+        <button class="btn bv" onclick="inscribirse()">✅ Inscribirme</button>
       </div>
-    </div>
-    <div class="card">
-      <div class="ctitle">📋 Estado de Pagos</div>
-      <div id="lista-pagos"></div>
+      <div id="pago-ins" style="display:none;"></div>
     </div>
   </div>
 
@@ -283,53 +198,38 @@ main{max-width:560px;margin:0 auto;padding:18px 14px 80px;}
     </div>
   </div>
 
-  <!-- VOTAR -->
-  <div id="s-votar" class="sec">
+  <!-- CALIFICAR -->
+  <div id="s-calificar" class="sec">
     <div class="card">
-      <div class="ctitle">⭐ Califica a los Jugadores</div>
-      <p style="color:#555;font-size:.88rem;margin-bottom:14px;"><strong>100 = el mejor</strong> &nbsp;·&nbsp; <strong>1 = principiante</strong></p>
+      <div class="ctitle">⭐ Califica a los jugadores</div>
+      <p style="color:#555;font-size:.88rem;margin-bottom:14px;line-height:1.6;">
+        Dile al organizador qué nivel tiene cada jugador que conoces.<br>
+        <strong>A = Avanzado &nbsp;·&nbsp; B = Intermedio &nbsp;·&nbsp; C = Principiante</strong><br>
+        Si no conoces a alguien, toca "No sé".
+      </p>
       <div class="fg">
         <label>¿Quién eres tú?</label>
-        <select id="vSel" onchange="actualizarVotos()"><option value="">Selecciona tu nombre...</option></select>
+        <select id="vSel" onchange="rCalificar()"><option value="">Selecciona tu nombre...</option></select>
       </div>
-      <div id="v-lista"></div>
-      <div id="v-btn" style="display:none;">
+      <div id="cal-lista"></div>
+      <div id="cal-btn" style="display:none;">
         <button class="btn bd" onclick="enviarVotos()">📤 Enviar mis calificaciones</button>
       </div>
     </div>
   </div>
 
-  <!-- RESULTADOS -->
-  <div id="s-resultados" class="sec">
-    <div class="card">
-      <div class="ctitle">📊 Resultados</div>
-      <div class="cleg">
-        <span class="badge bA">🥇 A: 70–100</span>
-        <span class="badge bB">🥈 B: 40–69</span>
-        <span class="badge bC">🥉 C: 1–39</span>
-      </div>
-      <div id="tabla-r"></div>
-    </div>
-  </div>
-
-  <!-- LLAVES -->
-  <div id="s-llaves" class="sec">
-    <div class="card">
-      <div class="ctitle">🏅 Llaves del Torneo</div>
-      <p style="color:#555;font-size:.85rem;margin-bottom:14px;">Partidos por categoría, automáticos.</p>
-      <div id="bracket"></div>
-    </div>
+  <!-- PARTIDOS -->
+  <div id="s-partidos" class="sec">
+    <div id="partidos-content"></div>
   </div>
 
 </main>
 
 <nav class="tbar">
-  <button class="tab active" onclick="irA('inscripcion',this)"><span class="ti">📝</span>Inscribirse</button>
-  <button class="tab" onclick="irA('pago',this)"><span class="ti">💳</span>Pagar</button>
+  <button class="tab active" onclick="irA('inscribirse',this)"><span class="ti">📝</span>Inscribirse</button>
   <button class="tab" onclick="irA('jugadores',this)"><span class="ti">👥</span>Jugadores</button>
-  <button class="tab" onclick="irA('votar',this)"><span class="ti">⭐</span>Votar</button>
-  <button class="tab" onclick="irA('resultados',this)"><span class="ti">📊</span>Resultados</button>
-  <button class="tab" onclick="irA('llaves',this)"><span class="ti">🏅</span>Llaves</button>
+  <button class="tab" onclick="irA('calificar',this)"><span class="ti">⭐</span>Calificar</button>
+  <button class="tab" onclick="irA('partidos',this)"><span class="ti">🏆</span>Partidos</button>
 </nav>
 
 <!-- ADMIN -->
@@ -338,195 +238,157 @@ main{max-width:560px;margin:0 auto;padding:18px 14px 80px;}
     <div class="handle"></div>
     <button class="cx" onclick="cerrarAdmin()">✕</button>
     <div id="a-login">
-      <h2>🔐 Administrador</h2>
-      <p style="color:#666;font-size:.9rem;margin-bottom:14px;">Ingresa tu contraseña</p>
-      <div class="fg">
-        <input type="password" id="apass" placeholder="Contraseña..." style="text-align:center;font-size:1.1rem;" onkeydown="if(event.key==='Enter')verPass()"/>
-      </div>
+      <h2>🔐 Admin</h2>
+      <div class="fg"><input type="password" id="apass" placeholder="Contraseña..." style="text-align:center;font-size:1.1rem;" onkeydown="if(event.key==='Enter')verPass()"/></div>
       <button class="btn bv" onclick="verPass()">Entrar</button>
       <p id="perr" style="color:#c0392b;margin-top:10px;font-size:.85rem;text-align:center;"></p>
     </div>
     <div id="a-cont" style="display:none;">
       <h2>⚙️ Panel de Control</h2>
       <hr class="adivider">
-      <p class="slabel">💳 Configuración de Pagos</p>
+      <span class="slabel">💳 Datos de Pago</span>
       <div class="fg"><label>Monto de inscripción ($MXN)</label><input id="cfg-monto" type="number" placeholder="200" min="1"/></div>
-      <p style="font-size:.8rem;font-weight:800;color:var(--spei);margin-bottom:8px;margin-top:4px;">🏦 Datos para transferencia SPEI</p>
-      <div class="fg"><label>Banco</label><input id="cfg-banco" type="text" placeholder="Ej: BBVA, Bancomer, HSBC..."/></div>
-      <div class="fg"><label>Nombre del beneficiario</label><input id="cfg-benef" type="text" placeholder="Nombre completo o razón social"/></div>
-      <div class="fg"><label>CLABE interbancaria (18 dígitos)</label><input id="cfg-clabe" type="text" placeholder="000000000000000000" maxlength="18"/></div>
-      <div class="fg"><label>Número de cuenta (opcional)</label><input id="cfg-cuenta" type="text" placeholder="Número de tarjeta o cuenta"/></div>
-      <p style="font-size:.8rem;font-weight:800;color:var(--mp);margin-bottom:8px;margin-top:4px;">💳 Link de Mercado Pago (opcional)</p>
-      <div class="fg"><label>Link de pago MP</label><input id="cfg-mplink" type="url" placeholder="https://mpago.la/..."/></div>
-      <p style="font-size:.72rem;color:#888;margin-top:-8px;margin-bottom:10px;">Créalo gratis en: mercadopago.com.mx → Cobrar → Link de pago</p>
-      <button class="btn bv" onclick="guardarCfg()">💾 Guardar configuración de pagos</button>
+      <p style="font-size:.78rem;font-weight:800;color:var(--spei);margin-bottom:7px;">🏦 Datos para transferencia</p>
+      <div class="fg"><label>Banco</label><input id="cfg-banco" type="text" placeholder="BBVA, HSBC, Banamex..."/></div>
+      <div class="fg"><label>Nombre del dueño de la cuenta</label><input id="cfg-benef" type="text" placeholder="Nombre completo"/></div>
+      <div class="fg"><label>CLABE (18 números)</label><input id="cfg-clabe" type="text" maxlength="18" placeholder="000000000000000000"/></div>
+      <div class="fg"><label>Número de tarjeta (opcional)</label><input id="cfg-cuenta" type="text"/></div>
+      <p style="font-size:.78rem;font-weight:800;color:var(--mp);margin-bottom:7px;margin-top:4px;">💳 Mercado Pago</p>
+      <div class="fg"><label>Link de cobro</label><input id="cfg-mplink" type="url" placeholder="https://mpago.la/..."/></div>
+      <p style="font-size:.7rem;color:#888;margin-top:-8px;margin-bottom:10px;">mercadopago.com.mx → Cobrar → Link de pago</p>
+      <button class="btn bv bsm" onclick="guardarCfg()">💾 Guardar datos de pago</button>
+
       <hr class="adivider">
-      <p class="slabel">✅ Confirmar Pagos Recibidos</p>
-      <p style="font-size:.8rem;color:#888;margin-bottom:10px;">Cuando recibas el pago, toca Confirmar.</p>
+      <span class="slabel">✅ Confirmar Pagos</span>
+      <p style="font-size:.78rem;color:#888;margin-bottom:9px;">Cuando alguien te mande su comprobante por WhatsApp, toca "Confirmar pago".</p>
       <div id="a-pagos"></div>
+
       <hr class="adivider">
-      <p class="slabel">🏆 Crear torneo</p>
-      <div class="fg"><label>Nombre</label><input id="tn" type="text" placeholder="Ej: Copa Hernández 2026"/></div>
+      <span class="slabel">🏷️ Categoría de cada jugador</span>
+      <p style="font-size:.78rem;color:#888;margin-bottom:9px;">Aquí ves los votos de los demás jugadores. Puedes cambiar la categoría si crees que no corresponde.</p>
+      <div id="a-cats"></div>
+
+      <hr class="adivider">
+      <span class="slabel">👫 Armar Parejas</span>
+      <p style="font-size:.78rem;color:#888;margin-bottom:9px;">Elige dos jugadores y ponlos en pareja. Asígnale la categoría A, B o C.</p>
+      <div class="g2c" style="margin-bottom:8px;">
+        <div class="fg" style="margin:0;"><label>Jugador 1</label><select id="par-j1"><option value="">—</option></select></div>
+        <div class="fg" style="margin:0;"><label>Jugador 2</label><select id="par-j2"><option value="">—</option></select></div>
+      </div>
+      <div class="fg"><label>Categoría de la pareja</label>
+        <select id="par-cat">
+          <option value="A">A — Avanzado</option>
+          <option value="B">B — Intermedio</option>
+          <option value="C">C — Principiante</option>
+        </select>
+      </div>
+      <button class="btn bv bsm" onclick="crearPareja()" style="margin-bottom:12px;">➕ Crear pareja</button>
+      <div id="a-parejas"></div>
+
+      <hr class="adivider">
+      <span class="slabel">🗂️ Armar Grupos</span>
+      <p style="font-size:.78rem;color:#888;margin-bottom:9px;">Pon cada pareja en el Grupo 1 o Grupo 2. Máximo 4 parejas por grupo.</p>
+      <div id="a-grupos"></div>
+      <button class="btn bv bsm" style="margin-top:10px;" onclick="generarCalendario()">📅 Crear partidos</button>
+
+      <hr class="adivider">
+      <span class="slabel">📝 Anotar Resultados</span>
+      <p style="font-size:.78rem;color:#888;margin-bottom:9px;">Escribe el marcador de cada partido que ya se jugó y toca 💾.</p>
+      <div id="a-resultados"></div>
+
+      <hr class="adivider">
+      <span class="slabel">🏆 Crear Torneo</span>
+      <div class="fg"><label>Nombre del torneo</label><input id="tn" type="text" placeholder="Copa Hernández 2026"/></div>
       <div class="g2c">
         <div class="fg"><label>Fecha</label><input id="tf" type="date"/></div>
         <div class="fg"><label>Estado</label>
           <select id="te">
-            <option value="abierto">✅ Abierto</option>
-            <option value="en-curso">⚡ En curso</option>
-            <option value="cerrado">🔒 Cerrado</option>
+            <option value="abierto">Abierto</option>
+            <option value="en-curso">En curso</option>
+            <option value="cerrado">Cerrado</option>
           </select>
         </div>
       </div>
-      <button class="btn bv" onclick="crearTorneo()">➕ Crear torneo</button>
+      <button class="btn bv bsm" onclick="crearTorneo()">➕ Crear torneo</button>
+      <div id="a-torneos" style="margin-top:10px;"></div>
+
       <hr class="adivider">
-      <p class="slabel">📋 Mis torneos</p>
-      <div id="a-torneos"></div>
-      <hr class="adivider">
-      <p class="slabel">👥 Jugadores</p>
-      <div id="a-jugadores"></div>
-      <hr class="adivider">
-      <button class="btn br bsm" onclick="borrarTodo()">⚠️ Borrar todo y reiniciar</button>
+      <button class="btn br bsm" onclick="borrarTodo()">⚠️ Borrar todo y empezar de nuevo</button>
     </div>
   </div>
 </div>
 
-<!-- ===================================================
-     FIREBASE SDK (Realtime Database)
-     =================================================== -->
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-app-compat.js"></script>
 <script src="https://www.gstatic.com/firebasejs/9.23.0/firebase-database-compat.js"></script>
-
 <script>
-// ===================================================
-// 🔥 PASO 1: PEGA AQUÍ TU CONFIGURACIÓN DE FIREBASE
-// Firebase Console → Tu proyecto → ⚙️ Config → Tu app web
-// ===================================================
-const firebaseConfig = {
-  apiKey:            "AIzaSyBA46H5_IwNS1sZmFCCf-6xoxVUQIrEtts",
-  authDomain:        "fronton-hernandez.firebaseapp.com",
-  databaseURL:       "https://fronton-hernandez-default-rtdb.firebaseio.com",
-  projectId:         "fronton-hernandez",
-  storageBucket:     "fronton-hernandez.firebasestorage.app",
-  messagingSenderId: "865934109628",
-  appId:             "1:865934109628:web:ba16c9b3caa9842f3ed9b9"
-};
-
+const firebaseConfig={apiKey:"AIzaSyBA46H5_IwNS1sZmFCCf-6xoxVUQIrEtts",authDomain:"fronton-hernandez.firebaseapp.com",databaseURL:"https://fronton-hernandez-default-rtdb.firebaseio.com",projectId:"fronton-hernandez",storageBucket:"fronton-hernandez.firebasestorage.app",messagingSenderId:"865934109628",appId:"1:865934109628:web:ba16c9b3caa9842f3ed9b9"};
 firebase.initializeApp(firebaseConfig);
-const db = firebase.database();
-const REF = db.ref('fronton-hernandez');
+const db=firebase.database();
+const REF=db.ref('fronton-hernandez');
 
-// ===================================================
-// ESTADO GLOBAL
-// ===================================================
-let S = {torneos:[],jugadores:[],votos:{},pagos:{},tid:null,
-         cfg:{monto:200,banco:'',benef:'',clabe:'',cuenta:'',mplink:''}};
-const PW = "fronton2026";
-let metodoActivo = '';
-let _skipListener = false;
+let S={cfg:{monto:200,banco:'',benef:'',clabe:'',cuenta:'',mplink:''},torneos:[],tid:null,jugadores:[],votos:{},pagos:{},catFinal:{},parejas:{},partidos:{}};
+const PW="fronton2026";
+let adminMode=false,_skip=false,_votosTemp={};
 
-// ===================================================
-// GUARDAR en Firebase
-// ===================================================
-function save() {
-  _skipListener = true;
-  REF.set(S).catch(err => console.error('Error al guardar:', err));
-}
-
-// ===================================================
-// CARGAR desde Firebase al inicio
-// ===================================================
-function load() {
-  REF.once('value').then(snap => {
-    const data = snap.val();
-    if (data) { S = data; }
+function save(){_skip=true;REF.set(S).catch(e=>console.error(e));}
+function load(){
+  REF.once('value').then(snap=>{
+    const d=snap.val();if(d)S=d;
     _fixS();
-    if (!S.torneos.length) {
-      S.torneos.push({id:1, nombre:"Copa Hernández 2026", fecha:"2026-04-12", estado:"abierto"});
-      S.tid = 1;
-      save();
-    }
-    document.getElementById('loading-overlay').style.display = 'none';
+    if(!S.torneos.length){S.torneos.push({id:1,nombre:"Copa Hernández 2026",fecha:"2026-04-12",estado:"abierto"});S.tid=1;save();}
+    document.getElementById('loading-overlay').style.display='none';
     rSel();
-
-    // Listener en tiempo real: actualiza si otro dispositivo hace cambios
-    REF.on('value', snap => {
-      if (_skipListener) { _skipListener = false; return; }
-      const d = snap.val();
-      if (d) { S = d; _fixS(); }
+    REF.on('value',snap2=>{
+      if(_skip){_skip=false;return;}
+      const d2=snap2.val();if(d2){S=d2;_fixS();}
       rSel();
-      const activa = document.querySelector('.sec.active');
-      if (activa) {
-        const id = activa.id.replace('s-','');
-        if (id==='jugadores') rJugadores();
-        if (id==='resultados') rResultados();
-        if (id==='pago') rPago();
-        if (id==='votar') rVotar();
-        if (id==='llaves') rLlaves();
-      }
+      const a=document.querySelector('.sec.active');
+      if(a){const id=a.id.replace('s-','');if(id==='jugadores')rJugadores();if(id==='calificar')rCalificarSel();if(id==='partidos')rPartidos();}
     });
-
-  }).catch(err => {
-    document.getElementById('loading-overlay').innerHTML =
-      '<div style="text-align:center;padding:20px;color:#f8d7da;max-width:320px;">' +
-      '<div style="font-size:2.5rem;margin-bottom:14px;">⚠️</div>' +
-      '<p style="font-family:Nunito,sans-serif;font-size:.95rem;line-height:1.7;color:white;">' +
-      'Error al conectar con Firebase.<br><br>Revisa que pegaste bien las credenciales en el código.</p>' +
-      '<p style="font-size:.78rem;margin-top:12px;color:#aaa;">' + err.message + '</p></div>';
-    console.error('Firebase error:', err);
+  }).catch(err=>{
+    document.getElementById('loading-overlay').innerHTML='<div style="text-align:center;padding:20px;color:white;max-width:300px;"><div style="font-size:2rem;margin-bottom:12px;">⚠️</div><p style="font-family:Nunito,sans-serif;font-size:.95rem;line-height:1.6;">Error al conectar.<br>Revisa tu internet.</p><p style="font-size:.78rem;color:#aaa;margin-top:10px;">'+err.message+'</p></div>';
   });
 }
-
-function _fixS() {
-  if (!S.torneos) S.torneos=[];
-  if (!S.jugadores) S.jugadores=[];
-  if (!S.votos) S.votos={};
-  if (!S.pagos) S.pagos={};
-  if (!S.cfg) S.cfg={monto:200,banco:'',benef:'',clabe:'',cuenta:'',mplink:''};
-  if (!S.tid && S.torneos.length) S.tid = S.torneos[0].id;
+function _fixS(){
+  if(!S.cfg)S.cfg={monto:200,banco:'',benef:'',clabe:'',cuenta:'',mplink:''};
+  if(!S.torneos)S.torneos=[];if(!S.jugadores)S.jugadores=[];
+  if(!S.votos)S.votos={};if(!S.pagos)S.pagos={};
+  if(!S.catFinal)S.catFinal={};if(!S.parejas)S.parejas={};if(!S.partidos)S.partidos={};
+  if(!S.tid&&S.torneos.length)S.tid=S.torneos[0].id;
 }
 
-// ===================================================
-// UTILIDADES
-// ===================================================
-function jt(){return S.jugadores.filter(j=>j.tid==S.tid);}
-function gt(){return S.torneos.find(t=>t.id==S.tid);}
-function prom(id){const v=S.votos[id];if(!v)return null;const a=Object.values(v);if(!a.length)return null;return Math.round(a.reduce((x,y)=>x+y,0)/a.length);}
-function cat(id){const p=prom(id);if(p===null)return null;return p>=70?'A':p>=40?'B':'C';}
-function shuf(a){for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
-function pagLabel(id){return S.pagos[id]==='pagado'?'✅ Pagado':'⏳ Pendiente';}
-function pagClass(id){return S.pagos[id]==='pagado'?'bPagado':'bPendiente';}
-
-function showToast(msg='✅ Copiado'){
-  const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');
-  setTimeout(()=>t.classList.remove('show'),2000);
+function jt(){return(S.jugadores||[]).filter(j=>j.tid==S.tid);}
+function gt(){return(S.torneos||[]).find(t=>t.id==S.tid);}
+function pt(){return(S.partidos[S.tid])||[];}
+function prt(){return(S.parejas[S.tid])||[];}
+function nj(id){const j=(S.jugadores||[]).find(x=>x.id==id);return j?j.nombre:'?';}
+function np(pid){const p=prt().find(x=>x.pid==pid);if(!p)return'?';return nj(p.j1)+' & '+nj(p.j2);}
+function catVotos(jid){
+  const v=S.votos[jid];if(!v)return null;
+  const vals=Object.values(v).filter(x=>x!=='X');if(!vals.length)return null;
+  const cnt={A:0,B:0,C:0};vals.forEach(x=>{if(cnt[x]!==undefined)cnt[x]++;});
+  return cnt.A>=cnt.B&&cnt.A>=cnt.C?'A':cnt.B>=cnt.C?'B':'C';
 }
-function copiar(elId,btnId){
-  const txt=document.getElementById(elId).textContent;
+function catEf(jid){return S.catFinal[jid]||catVotos(jid)||null;}
+function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2200);}
+function copiar(txt,btnId){
   navigator.clipboard.writeText(txt).then(()=>{
-    const b=document.getElementById(btnId);b.textContent='✓';b.classList.add('copied');
-    showToast('✅ Copiado al portapapeles');
-    setTimeout(()=>{b.textContent='Copiar';b.classList.remove('copied');},2000);
-  }).catch(()=>{
-    const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);
+    if(btnId){const b=document.getElementById(btnId);if(b){b.textContent='✓';b.classList.add('copied');setTimeout(()=>{b.textContent='Copiar';b.classList.remove('copied');},2000);}}
     showToast('✅ Copiado');
-  });
+  }).catch(()=>{const ta=document.createElement('textarea');ta.value=txt;document.body.appendChild(ta);ta.select();document.execCommand('copy');document.body.removeChild(ta);showToast('✅ Copiado');});
 }
-
 function irA(s,b){
   document.querySelectorAll('.sec').forEach(x=>x.classList.remove('active'));
   document.querySelectorAll('.tab').forEach(x=>x.classList.remove('active'));
   document.getElementById('s-'+s).classList.add('active');b.classList.add('active');
   if(s==='jugadores')rJugadores();
-  if(s==='votar')rVotar();
-  if(s==='resultados')rResultados();
-  if(s==='llaves')rLlaves();
-  if(s==='pago')rPago();
+  if(s==='calificar')rCalificarSel();
+  if(s==='partidos')rPartidos();
 }
-
 function rSel(){
   const el=document.getElementById('tSel');
   el.innerHTML='<option value="">— Elige un torneo —</option>';
-  S.torneos.forEach(t=>{const o=document.createElement('option');o.value=t.id;o.textContent=t.nombre;if(t.id==S.tid)o.selected=true;el.appendChild(o);});
+  (S.torneos||[]).forEach(t=>{const o=document.createElement('option');o.value=t.id;o.textContent=t.nombre;if(t.id==S.tid)o.selected=true;el.appendChild(o);});
   rPill();
 }
 function selTorneo(){const v=document.getElementById('tSel').value;S.tid=v?parseInt(v):null;save();rPill();}
@@ -534,163 +396,230 @@ function rPill(){
   const p=document.getElementById('epill'),t=gt();
   if(!t){p.style.display='none';return;}
   p.style.display='inline-flex';p.className='epill p-'+t.estado;
-  p.textContent=t.estado==='abierto'?'✅ Abierto':t.estado==='en-curso'?'⚡ En curso':'🔒 Cerrado';
+  const lbl={abierto:'✅ Abierto','en-curso':'⚡ En curso',cerrado:'🔒 Cerrado'};
+  p.textContent=lbl[t.estado]||t.estado;
 }
 
-// ===================================================
 // INSCRIPCIÓN
-// ===================================================
 function inscribirse(){
   const n=document.getElementById('ins-n').value.trim();
-  const tl=document.getElementById('ins-t').value.trim();
-  const e=document.getElementById('ins-e').value;
+  const tel=document.getElementById('ins-t').value.trim();
+  const comp=document.getElementById('ins-comp').value.trim();
+  const exp=document.getElementById('ins-e').value;
+  const cat=document.getElementById('ins-cat').value;
   const av=document.getElementById('av-ins');
-  if(!n||!tl){av.innerHTML='<div class="alert aerr">⚠️ Llena tu nombre y teléfono.</div>';return;}
+  if(!n||!tel){av.innerHTML='<div class="alert aerr">⚠️ Escribe tu nombre y teléfono.</div>';return;}
   if(!S.tid){av.innerHTML='<div class="alert aerr">⚠️ Selecciona un torneo arriba.</div>';return;}
   const t=gt();
-  if(t?.estado!=='abierto'){av.innerHTML='<div class="alert aerr">🔒 Las inscripciones están cerradas.</div>';return;}
-  if(jt().find(j=>j.nombre.toLowerCase()===n.toLowerCase())){av.innerHTML='<div class="alert aerr">⚠️ Ya hay un jugador con ese nombre.</div>';return;}
+  if(t&&t.estado!=='abierto'){av.innerHTML='<div class="alert aerr">🔒 Las inscripciones están cerradas.</div>';return;}
+  if(jt().find(j=>j.nombre.toLowerCase()===n.toLowerCase())){av.innerHTML='<div class="alert aerr">⚠️ Ya hay alguien inscrito con ese nombre.</div>';return;}
   const id=Date.now();
-  S.jugadores.push({id,tid:S.tid,nombre:n,tel:tl,exp:e,fecha:new Date().toLocaleDateString('es-MX')});
+  S.jugadores.push({id,tid:S.tid,nombre:n,tel,comp,exp,catPref:cat,fecha:new Date().toLocaleDateString('es-MX')});
   S.pagos[id]='pendiente';save();
-  const m=S.cfg.monto||200;
-  av.innerHTML=`<div class="alert aok">✅ <strong>${n}</strong>, ¡ya estás inscrito!<br>Ahora ve a <strong>💳 Pagar</strong> para pagar tu inscripción de <strong>$${m} MXN</strong>.</div>`;
-  document.getElementById('ins-n').value='';document.getElementById('ins-t').value='';
+  document.getElementById('form-ins').style.display='none';
+  av.innerHTML='<div class="alert aok">✅ ¡Listo <strong>'+n+'</strong>! Ya quedaste inscrito.<br>Ahora paga tu inscripción aquí abajo 👇</div>';
+  mostrarPagoInline(id,n);
 }
 
-// ===================================================
-// PAGO
-// ===================================================
-function rPago(){
-  const js=jt(),sel=document.getElementById('pago-sel');
-  sel.innerHTML='<option value="">Selecciona tu nombre...</option>';
-  js.forEach(j=>{const o=document.createElement('option');o.value=j.id;o.textContent=j.nombre+(S.pagos[j.id]==='pagado'?' ✅':'');sel.appendChild(o);});
-  document.getElementById('pago-cuerpo').style.display='none';
-  document.getElementById('pago-aviso').innerHTML='';
-  rListaPagos();
+function mostrarPagoInline(jid,nombre){
+  const c=S.cfg,m=c.monto||200;
+  const concepto='Inscripción '+nombre;
+  const cid='cb'+jid;
+  const tid='ct'+jid;
+  let h=`<div class="pago-box">
+    <h3>💳 Paga tu inscripción</h3>
+    <div class="monto-g">$${m} MXN</div>
+    <div class="monto-sub">Frontón Hernández · Tultitlán</div>
+    <p style="font-size:.82rem;font-weight:800;color:var(--v3);margin-bottom:10px;text-align:center;">¿Cómo quieres pagar?</p>
+    <div class="met-sel">
+      <div class="mbtn" id="mb-spei" onclick="elegirMet('spei')">
+        <span class="mi">🏦</span><div class="mn">Transferencia</div><div class="ms">Sin comisión</div>
+      </div>
+      <div class="mbtn" id="mb-mp" onclick="elegirMet('mp')">
+        <span class="mi">💳</span><div class="mn">Mercado Pago</div><div class="ms">Tarjeta · OXXO</div>
+      </div>
+    </div>
+    <div id="det-spei" style="display:none;">
+      <div class="det-spei">
+        <div class="det-titulo det-titulo-spei">🏦 Haz la transferencia a esta cuenta:</div>
+        <div class="dato-row"><span class="dato-label">Banco</span><span class="dato-valor">${c.banco||'(no configurado)'}</span></div>
+        <div class="dato-row"><span class="dato-label">A nombre de</span><span class="dato-valor">${c.benef||'(no configurado)'}</span></div>
+        <div class="dato-row"><span class="dato-label">CLABE</span><span class="dato-valor" id="vclabe">${c.clabe||'(no configurado)'}</span><button class="copy-btn" id="${cid}" onclick="copiar('${c.clabe}','${cid}')">Copiar</button></div>
+        ${c.cuenta?`<div class="dato-row"><span class="dato-label">Tarjeta</span><span class="dato-valor">${c.cuenta}</span><button class="copy-btn" id="${tid}" onclick="copiar('${c.cuenta}','${tid}')">Copiar</button></div>`:''}
+        <div class="dato-row"><span class="dato-label">Concepto</span><span class="dato-valor">${concepto}</span></div>
+        <div class="alert ainf" style="margin-top:10px;font-size:.82rem;">
+          1. Abre la app de tu banco.<br>
+          2. Haz la transferencia por exactamente $${m}.<br>
+          3. En concepto escribe tu nombre.<br>
+          4. Guarda tu comprobante y mándalo al organizador por WhatsApp.<br>
+          5. El organizador confirma tu pago y ya quedas listo.
+        </div>
+      </div>
+    </div>
+    <div id="det-mp" style="display:none;">
+      <div class="det-mp">
+        <div class="det-titulo det-titulo-mp">💳 Paga con Mercado Pago:</div>
+        <div style="display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px;">
+          <span style="background:white;border:1px solid #ddd;border-radius:7px;padding:3px 9px;font-size:.72rem;font-weight:700;">💳 Tarjeta</span>
+          <span style="background:white;border:1px solid #ddd;border-radius:7px;padding:3px 9px;font-size:.72rem;font-weight:700;">🏪 OXXO Pay</span>
+          <span style="background:white;border:1px solid #ddd;border-radius:7px;padding:3px 9px;font-size:.72rem;font-weight:700;">💰 Saldo MP</span>
+        </div>
+        <button class="btn bmp" onclick="irMP()">Pagar con Mercado Pago →</button>
+        <div class="alert ainf" style="margin-top:10px;font-size:.82rem;">
+          Al terminar de pagar, mándale tu comprobante al organizador por WhatsApp para que confirme tu pago.
+        </div>
+      </div>
+    </div>
+  </div>`;
+  document.getElementById('pago-ins').innerHTML=h;
+  document.getElementById('pago-ins').style.display='block';
 }
-function mostrarPago(){
-  const jid=document.getElementById('pago-sel').value;
-  const cuerpo=document.getElementById('pago-cuerpo');
-  const av=document.getElementById('pago-aviso');
-  av.innerHTML='';metodoActivo='';
-  document.getElementById('detalle-spei').style.display='none';
-  document.getElementById('detalle-mp').style.display='none';
-  document.getElementById('mbtn-spei').className='metodo-btn';
-  document.getElementById('mbtn-mp').className='metodo-btn';
-  if(!jid){cuerpo.style.display='none';return;}
-  if(S.pagos[jid]==='pagado'){
-    cuerpo.style.display='none';
-    av.innerHTML='<div class="alert aok">✅ Tu pago ya fue confirmado. ¡Gracias!</div>';return;
-  }
-  const m=S.cfg.monto||200;
-  document.getElementById('pago-monto').textContent=`$${m} MXN`;
-  cuerpo.style.display='block';
+function elegirMet(m){
+  document.getElementById('mb-spei').className='mbtn'+(m==='spei'?' sel-spei':'');
+  document.getElementById('mb-mp').className='mbtn'+(m==='mp'?' sel-mp':'');
+  document.getElementById('det-spei').style.display=m==='spei'?'block':'none';
+  document.getElementById('det-mp').style.display=m==='mp'?'block':'none';
 }
-function elegirMetodo(m){
-  metodoActivo=m;
-  document.getElementById('mbtn-spei').className='metodo-btn'+(m==='spei'?' selected-spei':'');
-  document.getElementById('mbtn-mp').className='metodo-btn'+(m==='mp'?' selected-mp':'');
-  document.getElementById('detalle-spei').style.display=m==='spei'?'block':'none';
-  document.getElementById('detalle-mp').style.display=m==='mp'?'block':'none';
-  if(m==='spei'){
-    document.getElementById('spei-banco').textContent=S.cfg.banco||'(no configurado)';
-    document.getElementById('spei-nombre').textContent=S.cfg.benef||'(no configurado)';
-    document.getElementById('spei-clabe').textContent=S.cfg.clabe||'(no configurado)';
-    document.getElementById('spei-cuenta').textContent=S.cfg.cuenta||'—';
-    const jid=document.getElementById('pago-sel').value;
-    const j=S.jugadores.find(x=>x.id==jid);
-    document.getElementById('spei-concepto').textContent=j?`Inscripción ${j.nombre}`:'Inscripción frontón';
-  }
-}
-function irAMercadoPago(){
+function irMP(){
   const link=S.cfg.mplink;
-  if(!link||link.trim()===''){alert('El organizador aún no configuró el link de Mercado Pago. Contáctalo por WhatsApp.');return;}
+  if(!link||!link.trim()){alert('El organizador aún no configuró el link de Mercado Pago. Llámale o mándale WhatsApp.');return;}
   window.open(link,'_blank');
 }
-function rListaPagos(){
-  const el=document.getElementById('lista-pagos'),js=jt();
-  if(!js.length){el.innerHTML='<div class="empty"><div class="ei">💳</div><p>No hay jugadores inscritos.</p></div>';return;}
-  el.innerHTML=js.map(j=>`<div class="pago-status"><div><div class="pn">${j.nombre}</div><small>Inscrito: ${j.fecha}</small></div><span class="badge ${pagClass(j.id)}">${pagLabel(j.id)}</span></div>`).join('');
-}
 
-// ===================================================
 // JUGADORES
-// ===================================================
 function rJugadores(){
   const el=document.getElementById('lista-j'),js=jt();
-  if(!js.length){el.innerHTML='<div class="empty"><div class="ei">🤚</div><p>Nadie inscrito todavía.</p></div>';return;}
-  el.innerHTML=js.map(j=>{const c=cat(j.id);return`<div class="prow"><div class="pinfo"><strong>${j.nombre}</strong><small>📱 ${j.tel} · ⏱ ${j.exp}</small></div><div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end;">${c?`<span class="badge b${c}">Cat. ${c}</span>`:'<span class="badge bSin">Sin votos</span>'}<span class="badge ${pagClass(j.id)}" style="font-size:.68rem;">${pagLabel(j.id)}</span></div></div>`;}).join('');
+  if(!js.length){el.innerHTML='<div class="empty"><div class="ei">🤚</div><p>Todavía no hay nadie inscrito.</p></div>';return;}
+  el.innerHTML=js.map(j=>{
+    const cat=catEf(j.id);const pag=S.pagos[j.id]==='pagado';
+    return`<div class="prow"><div class="pinfo"><strong>${j.nombre}</strong><small>📱 ${j.tel}${j.comp?' · 🤝 '+j.comp:''}</small></div>
+      <div style="display:flex;flex-direction:column;gap:4px;align-items:flex-end;">
+        ${cat?`<span class="badge b${cat}">Cat. ${cat}</span>`:'<span class="badge bSin">Sin categoría</span>'}
+        <span class="badge ${pag?'bPagado':'bPendiente'}">${pag?'✅ Pagado':'⏳ Sin pagar'}</span>
+      </div></div>`;
+  }).join('');
 }
 
-// ===================================================
-// VOTAR
-// ===================================================
-function rVotar(){
+// CALIFICAR
+function rCalificarSel(){
   const js=jt(),sel=document.getElementById('vSel');
   sel.innerHTML='<option value="">Selecciona tu nombre...</option>';
   js.forEach(j=>{const o=document.createElement('option');o.value=j.id;o.textContent=j.nombre;sel.appendChild(o);});
-  document.getElementById('v-lista').innerHTML='';document.getElementById('v-btn').style.display='none';
+  document.getElementById('cal-lista').innerHTML='';
+  document.getElementById('cal-btn').style.display='none';
 }
-function actualizarVotos(){
+function rCalificar(){
   const vid=document.getElementById('vSel').value;
-  const lista=document.getElementById('v-lista'),vbtn=document.getElementById('v-btn');
+  const lista=document.getElementById('cal-lista'),btn=document.getElementById('cal-btn');
+  _votosTemp={};
+  if(!vid){lista.innerHTML='';btn.style.display='none';return;}
   const otros=jt().filter(j=>j.id!=vid);
-  if(!vid){lista.innerHTML='';vbtn.style.display='none';return;}
+  if(!otros.length){lista.innerHTML='<div class="alert ainf">Se necesitan más jugadores para calificar.</div>';btn.style.display='none';return;}
   const yaVoto=otros.some(j=>S.votos[j.id]&&S.votos[j.id][vid]!==undefined);
-  if(yaVoto){lista.innerHTML='<div class="yv-banner">✅ Ya enviaste tus calificaciones. ¡Gracias!</div>';vbtn.style.display='none';return;}
-  if(!otros.length){lista.innerHTML='<div class="alert ainf">ℹ️ Necesitas al menos 2 jugadores para votar.</div>';vbtn.style.display='none';return;}
-  lista.innerHTML=otros.map(j=>`<div class="vcard"><div class="vpname">🤚 ${j.nombre}</div><div class="srow"><span style="font-size:.72rem;color:#aaa;">1</span><input type="range" min="1" max="100" value="50" id="sl-${j.id}" oninput="document.getElementById('n-${j.id}').textContent=this.value"/><span style="font-size:.72rem;color:#aaa;">100</span><div class="sbox" id="n-${j.id}">50</div></div><div class="slabels"><span>Principiante</span><span>Intermedio</span><span>Avanzado</span></div></div>`).join('');
-  vbtn.style.display='block';
+  if(yaVoto){lista.innerHTML='<div class="ya-voto">✅ Ya mandaste tus calificaciones. ¡Gracias!</div>';btn.style.display='none';return;}
+  lista.innerHTML=otros.map(j=>`
+    <div class="cal-card">
+      <div class="cal-nombre">🤚 ${j.nombre}</div>
+      <div class="cat-btns">
+        <button class="cbtn" id="cb-${j.id}-A" onclick="selCat(${j.id},'A')">A<br><small style="font-weight:400;font-size:.7rem;">Avanzado</small></button>
+        <button class="cbtn" id="cb-${j.id}-B" onclick="selCat(${j.id},'B')">B<br><small style="font-weight:400;font-size:.7rem;">Intermedio</small></button>
+        <button class="cbtn" id="cb-${j.id}-C" onclick="selCat(${j.id},'C')">C<br><small style="font-weight:400;font-size:.7rem;">Principiante</small></button>
+        <button class="cbtn" id="cb-${j.id}-X" onclick="selCat(${j.id},'X')">?<br><small style="font-weight:400;font-size:.7rem;">No sé</small></button>
+      </div>
+    </div>`).join('');
+  btn.style.display='block';
+}
+function selCat(jid,cat){
+  _votosTemp[jid]=cat;
+  ['A','B','C','X'].forEach(c=>{const b=document.getElementById('cb-'+jid+'-'+c);if(b)b.className='cbtn'+(c===cat?' sel-'+c:'');});
 }
 function enviarVotos(){
   const vid=document.getElementById('vSel').value;
-  if(!vid){alert('Selecciona tu nombre primero.');return;}
-  jt().filter(j=>j.id!=vid).forEach(j=>{const sl=document.getElementById('sl-'+j.id);if(sl){if(!S.votos[j.id])S.votos[j.id]={};S.votos[j.id][vid]=parseInt(sl.value);}});
-  save();
-  document.getElementById('v-lista').innerHTML='<div class="yv-banner">✅ ¡Calificaciones enviadas! Revisa resultados en 📊.</div>';
-  document.getElementById('v-btn').style.display='none';
-}
-
-// ===================================================
-// RESULTADOS
-// ===================================================
-function rResultados(){
-  const el=document.getElementById('tabla-r'),js=jt();
-  if(!js.length){el.innerHTML='<div class="empty"><div class="ei">📊</div><p>No hay jugadores.</p></div>';return;}
-  const s=[...js].map(j=>({...j,p:prom(j.id),nv:S.votos[j.id]?Object.keys(S.votos[j.id]).length:0,c:cat(j.id)})).sort((a,b)=>(b.p||0)-(a.p||0));
-  el.innerHTML=`<table class="rtable"><thead><tr><th>#</th><th>Jugador</th><th>Punt.</th><th>Cat.</th></tr></thead><tbody>${s.map((j,i)=>`<tr><td><strong>${i+1}</strong></td><td><strong>${j.nombre}</strong><br><small style="color:#888;">${j.nv} voto${j.nv!==1?'s':''}</small></td><td>${j.p!==null?`<div class="sbw"><div class="sbar" style="width:${Math.round(j.p*.65)}px;"></div><span class="snum">${j.p}</span></div>`:'—'}</td><td>${j.c?`<span class="badge b${j.c}">${j.c}</span>`:'—'}</td></tr>`).join('')}</tbody></table>`;
-}
-
-// ===================================================
-// LLAVES
-// ===================================================
-function rLlaves(){
-  const el=document.getElementById('bracket'),js=jt();
-  if(js.length<2){el.innerHTML='<div class="empty"><div class="ei">🏅</div><p>Necesitas al menos 2 jugadores.</p></div>';return;}
-  const cats={A:[],B:[],C:[],Sin:[]};
-  js.forEach(j=>{const c=cat(j.id);cats[c||'Sin'].push(j);});
-  const info={A:{e:'🥇',l:'Categoría A — Avanzado',b:'bA'},B:{e:'🥈',l:'Categoría B — Intermedio',b:'bB'},C:{e:'🥉',l:'Categoría C — Principiante',b:'bC'},Sin:{e:'⏳',l:'Sin categoría aún',b:'bSin'}};
-  let h='';
-  ['A','B','C','Sin'].forEach(c=>{
-    const arr=cats[c];if(!arr.length)return;
-    const i=info[c];
-    h+=`<div class="bcat"><div class="bhdr"><span style="font-size:1.3rem;">${i.e}</span><h3>${i.l}</h3><span class="badge ${i.b}">${arr.length}</span></div>`;
-    if(arr.length<2){h+=`<div class="alert ainf">ℹ️ Se necesitan al menos 2 jugadores aquí.</div>`;}
-    else{
-      const s=shuf([...arr]);h+='<div class="mgrid">';
-      for(let x=0;x<s.length-1;x+=2){h+=`<div class="mcard"><div class="mlabel">Partido ${Math.floor(x/2)+1}</div><div class="mp-p">🤚 ${s[x].nombre}</div><div class="mvs">VS</div><div class="mp-p">🤚 ${s[x+1].nombre}</div></div>`;}
-      if(s.length%2){h+=`<div class="mcard" style="border-left-color:var(--d);"><div class="mlabel">Pase directo</div><div class="mp-p">🤚 ${s[s.length-1].nombre}</div><div class="mvs" style="color:#aaa;">BYE</div><div class="mp-p" style="color:#bbb;">—</div></div>`;}
-      h+='</div>';
-    }
-    h+='</div>';
+  if(!vid){alert('Elige tu nombre primero.');return;}
+  jt().filter(j=>j.id!=vid).forEach(j=>{
+    const v=_votosTemp[j.id];
+    if(v){if(!S.votos[j.id])S.votos[j.id]={};S.votos[j.id][vid]=v;}
   });
-  el.innerHTML=h||'<div class="empty"><div class="ei">⏳</div><p>Sin categorías asignadas aún.</p></div>';
+  save();
+  document.getElementById('cal-lista').innerHTML='<div class="ya-voto">✅ ¡Listo! Tus calificaciones se guardaron. ¡Gracias!</div>';
+  document.getElementById('cal-btn').style.display='none';_votosTemp={};
 }
 
-// ===================================================
+// PARTIDOS
+function rPartidos(){
+  const el=document.getElementById('partidos-content');
+  if(!S.tid){el.innerHTML='<div class="card"><div class="empty"><div class="ei">🏆</div><p>Selecciona un torneo arriba.</p></div></div>';return;}
+  const partidos=pt();
+  if(!partidos.length){el.innerHTML='<div class="card"><div class="empty"><div class="ei">🏆</div><p>El organizador todavía no ha publicado los partidos.<br>Espera a que se anuncien.</p></div></div>';return;}
+  let h='';
+  ['A','B','C'].forEach(cat=>{
+    const pCat=partidos.filter(p=>p.cat===cat);if(!pCat.length)return;
+    const labels={A:'🥇 Categoría A — Avanzado',B:'🥈 Categoría B — Intermedio',C:'🥉 Categoría C — Principiante'};
+    h+=`<div class="cat-section"><div class="cat-header">${labels[cat]}</div>`;
+    // Grupos
+    ['g1','g2'].forEach((gid,gi)=>{
+      const pg=pCat.filter(p=>p.fase==='grupo'&&p.grupoId===gid);if(!pg.length)return;
+      const tabla=calcTabla(cat,gid);
+      const todos=pg.every(p=>p.jugado);
+      h+=`<div class="grupo-blk"><div class="grupo-nombre">📊 Grupo ${gi+1}</div>
+        <table class="tabla-pos"><thead><tr><th>Pareja</th><th>PJ</th><th>G</th><th>P</th><th>Dif</th><th>Pts</th></tr></thead><tbody>`;
+      tabla.forEach((r,ri)=>{
+        h+=`<tr class="${ri<2?'clasifica':''}"><td>${np(r.pid)}</td><td>${r.pj}</td><td>${r.g}</td><td>${r.p}</td><td>${r.dif>=0?'+':''}${r.dif}</td><td><strong>${r.pts}</strong></td></tr>`;
+      });
+      h+=`</tbody></table>`;
+      if(todos&&tabla.length>=2)h+=`<div class="alert aok" style="font-size:.8rem;margin-bottom:8px;">✅ Clasifican al siguiente: ${tabla.slice(0,2).map(r=>np(r.pid)).join(' y ')}</div>`;
+      pg.forEach(p=>{
+        h+=`<div class="match-item"><div class="match-teams">${np(p.p1)}<br>vs ${np(p.p2)}</div>
+          ${p.jugado?`<div class="match-score">${p.s1} – ${p.s2}</div>`:'<div class="match-pend">Por jugar</div>'}</div>`;
+      });
+      h+=`</div>`;
+    });
+    // Semis
+    const pSemis=pCat.filter(p=>p.fase==='semi');
+    if(pSemis.length){
+      h+=`<div class="semi-card"><div class="semi-label">🥊 Semifinales</div>`;
+      pSemis.forEach(p=>{
+        h+=`<div class="match-item"><div class="match-teams">${np(p.p1)}<br>vs ${np(p.p2)}</div>
+          ${p.jugado?`<div class="match-score">${p.s1} – ${p.s2}</div>`:'<div class="match-pend">Por jugar</div>'}</div>`;
+      });
+      h+=`</div>`;
+    }
+    // Final
+    const pFinal=pCat.filter(p=>p.fase==='final');
+    if(pFinal.length){
+      const f=pFinal[0];
+      if(f.jugado){
+        const ganador=f.s1>f.s2?f.p1:f.p2;
+        h+=`<div class="campeon-banner"><div class="ct">🏆 CAMPEÓN Categoría ${cat}</div><div class="cn">🤚 ${np(ganador)}</div></div>`;
+      } else {
+        h+=`<div class="semi-card"><div class="semi-label">🏆 Final</div>
+          <div class="match-item"><div class="match-teams">${np(f.p1)}<br>vs ${np(f.p2)}</div><div class="match-pend">Por jugar</div></div></div>`;
+      }
+    }
+    h+=`</div>`;
+  });
+  el.innerHTML=h||'<div class="card"><div class="empty"><div class="ei">🏆</div><p>No hay partidos todavía.</p></div></div>';
+}
+
+function calcTabla(cat,gid){
+  const pg=pt().filter(p=>p.cat===cat&&p.fase==='grupo'&&p.grupoId===gid);
+  const pids=[...new Set([...pg.map(p=>p.p1),...pg.map(p=>p.p2)])];
+  const tbl={};pids.forEach(pid=>tbl[pid]={pid,pj:0,g:0,p:0,dif:0,pts:0});
+  pg.filter(p=>p.jugado).forEach(p=>{
+    tbl[p.p1].pj++;tbl[p.p2].pj++;tbl[p.p1].dif+=(p.s1-p.s2);tbl[p.p2].dif+=(p.s2-p.s1);
+    if(p.s1>p.s2){tbl[p.p1].g++;tbl[p.p1].pts+=3;tbl[p.p2].p++;}
+    else{tbl[p.p2].g++;tbl[p.p2].pts+=3;tbl[p.p1].p++;}
+  });
+  return Object.values(tbl).sort((a,b)=>b.pts-a.pts||b.dif-a.dif||b.g-a.g);
+}
+function rrPartidos(pids,cat,gid){
+  const ps=[];
+  for(let i=0;i<pids.length;i++)for(let j=i+1;j<pids.length;j++)
+    ps.push({id:Date.now()+ps.length*13,cat,fase:'grupo',grupoId:gid,p1:pids[i],p2:pids[j],s1:null,s2:null,jugado:false});
+  return ps;
+}
+
 // ADMIN
-// ===================================================
 function abrirAdmin(){
   document.getElementById('ov').classList.add('active');
   document.getElementById('apass').value='';document.getElementById('perr').textContent='';
@@ -700,68 +629,258 @@ function cerrarAdmin(){document.getElementById('ov').classList.remove('active');
 document.getElementById('ov').addEventListener('click',function(e){if(e.target===this)cerrarAdmin();});
 function verPass(){
   if(document.getElementById('apass').value===PW){
+    adminMode=true;
     document.getElementById('a-login').style.display='none';document.getElementById('a-cont').style.display='block';
-    const c=S.cfg;
-    document.getElementById('cfg-monto').value=c.monto||200;
-    document.getElementById('cfg-banco').value=c.banco||'';
-    document.getElementById('cfg-benef').value=c.benef||'';
-    document.getElementById('cfg-clabe').value=c.clabe||'';
-    document.getElementById('cfg-cuenta').value=c.cuenta||'';
-    document.getElementById('cfg-mplink').value=c.mplink||'';
-    rAT();rAJ();rAPagos();
+    cargarCfg();rAPagos();rACats();rAParejas();rAGrupos();rAResultados();rAT();
   }else{document.getElementById('perr').textContent='❌ Contraseña incorrecta.';}
+}
+function cargarCfg(){
+  const c=S.cfg;
+  document.getElementById('cfg-monto').value=c.monto||200;document.getElementById('cfg-banco').value=c.banco||'';
+  document.getElementById('cfg-benef').value=c.benef||'';document.getElementById('cfg-clabe').value=c.clabe||'';
+  document.getElementById('cfg-cuenta').value=c.cuenta||'';document.getElementById('cfg-mplink').value=c.mplink||'';
 }
 function guardarCfg(){
   const m=parseInt(document.getElementById('cfg-monto').value);
   if(!m||m<1){alert('Escribe un monto válido.');return;}
-  S.cfg={
-    monto:m,
-    banco:document.getElementById('cfg-banco').value.trim(),
-    benef:document.getElementById('cfg-benef').value.trim(),
-    clabe:document.getElementById('cfg-clabe').value.trim(),
-    cuenta:document.getElementById('cfg-cuenta').value.trim(),
-    mplink:document.getElementById('cfg-mplink').value.trim()
-  };
-  save();showToast('✅ Configuración guardada');
+  S.cfg={monto:m,banco:document.getElementById('cfg-banco').value.trim(),benef:document.getElementById('cfg-benef').value.trim(),
+    clabe:document.getElementById('cfg-clabe').value.trim(),cuenta:document.getElementById('cfg-cuenta').value.trim(),
+    mplink:document.getElementById('cfg-mplink').value.trim()};
+  save();showToast('✅ Datos de pago guardados');
 }
+
 function rAPagos(){
   const el=document.getElementById('a-pagos'),js=jt();
-  if(!js.length){el.innerHTML='<p style="color:#aaa;font-size:.85rem;">No hay jugadores.</p>';return;}
-  el.innerHTML=js.map(j=>`<div class="pago-status" style="margin-bottom:8px;"><div><div class="pn" style="font-size:.9rem;">${j.nombre}</div><small>${j.tel}</small></div><div style="display:flex;gap:6px;align-items:center;">${S.pagos[j.id]==='pagado'?`<span class="badge bPagado" style="font-size:.72rem;">✅ Pagado</span><button class="btn br bsm" onclick="togglePago(${j.id})" style="font-size:.7rem;padding:4px 9px;">Revertir</button>`:`<button class="btn bv bsm" onclick="togglePago(${j.id})" style="font-size:.78rem;padding:5px 12px;">✅ Confirmar pago</button>`}</div></div>`).join('');
+  if(!js.length){el.innerHTML='<p style="color:#aaa;font-size:.85rem;">No hay jugadores aún.</p>';return;}
+  el.innerHTML=js.map(j=>`
+    <div class="prow" style="margin-bottom:7px;">
+      <div><div style="font-weight:700;font-size:.9rem;">${j.nombre}</div><small style="color:#666;">${j.tel}</small></div>
+      <div style="display:flex;gap:6px;align-items:center;">
+        ${S.pagos[j.id]==='pagado'
+          ?`<span class="badge bPagado">✅ Pagado</span><button class="btn br bxs" onclick="togglePago(${j.id})">Revertir</button>`
+          :`<button class="btn bv bsm" onclick="togglePago(${j.id})">✅ Confirmar pago</button>`}
+      </div>
+    </div>`).join('');
 }
-function togglePago(id){S.pagos[id]=S.pagos[id]==='pagado'?'pendiente':'pagado';save();rAPagos();showToast(S.pagos[id]==='pagado'?'✅ Pago confirmado':'↩️ Pago revertido');}
+function togglePago(id){S.pagos[id]=S.pagos[id]==='pagado'?'pendiente':'pagado';save();rAPagos();showToast(S.pagos[id]==='pagado'?'✅ Pago confirmado':'↩️ Revertido');}
+
+function rACats(){
+  const el=document.getElementById('a-cats'),js=jt();
+  if(!js.length){el.innerHTML='<p style="color:#aaa;font-size:.85rem;">No hay jugadores aún.</p>';return;}
+  el.innerHTML=js.map(j=>{
+    const votos=S.votos[j.id]?Object.values(S.votos[j.id]).filter(v=>v!=='X'):[];
+    const cnt={A:0,B:0,C:0};votos.forEach(v=>{if(cnt[v]!==undefined)cnt[v]++;});
+    const vStr=votos.length?`A:${cnt.A} B:${cnt.B} C:${cnt.C}`:'Sin votos';
+    const cf=S.catFinal[j.id]||'';
+    return`<div class="prow" style="margin-bottom:7px;flex-wrap:wrap;gap:6px;">
+      <div style="flex:1;min-width:120px;"><div style="font-weight:700;font-size:.88rem;">${j.nombre}</div><small style="color:#888;">Votos: ${vStr}</small></div>
+      <select onchange="setCat(${j.id},this.value)" style="font-size:.82rem;padding:5px 8px;border-radius:8px;border:1.5px solid var(--g2);font-family:Nunito,sans-serif;">
+        <option value="">Auto (${catVotos(j.id)||j.catPref})</option>
+        <option value="A" ${cf==='A'?'selected':''}>A — Avanzado</option>
+        <option value="B" ${cf==='B'?'selected':''}>B — Intermedio</option>
+        <option value="C" ${cf==='C'?'selected':''}>C — Principiante</option>
+      </select>
+    </div>`;
+  }).join('');
+}
+function setCat(jid,val){if(val)S.catFinal[jid]=val;else delete S.catFinal[jid];save();showToast('✅ Categoría guardada');}
+
+function rAParejas(){
+  const js=jt();
+  const yaEnPareja=new Set();
+  prt().forEach(p=>{yaEnPareja.add(String(p.j1));yaEnPareja.add(String(p.j2));});
+  const libres=js.filter(j=>!yaEnPareja.has(String(j.id)));
+  ['par-j1','par-j2'].forEach(selId=>{
+    const sel=document.getElementById(selId);const cur=sel.value;
+    sel.innerHTML='<option value="">—</option>';
+    libres.forEach(j=>{const o=document.createElement('option');o.value=j.id;o.textContent=j.nombre+(j.comp?' (quiere con '+j.comp+')':'');if(j.id==cur)o.selected=true;sel.appendChild(o);});
+  });
+  const el=document.getElementById('a-parejas');
+  const ps=prt();
+  if(!ps.length){el.innerHTML='<p style="color:#aaa;font-size:.85rem;">Sin parejas todavía.</p>';return;}
+  const cats={A:[],B:[],C:[]};ps.forEach(p=>{if(cats[p.cat])cats[p.cat].push(p);});
+  el.innerHTML=['A','B','C'].map(cat=>{
+    if(!cats[cat].length)return'';
+    return`<div style="margin-bottom:10px;"><div style="font-size:.78rem;font-weight:800;color:var(--v3);margin-bottom:5px;">Categoría ${cat}:</div>
+      ${cats[cat].map(p=>`<div class="prow" style="margin-bottom:5px;"><span style="font-weight:700;font-size:.88rem;">👫 ${nj(p.j1)} & ${nj(p.j2)}</span>
+        <button class="btn br bxs" onclick="elimPareja(${p.pid})">🗑 Borrar</button></div>`).join('')}</div>`;
+  }).join('');
+}
+function crearPareja(){
+  const j1=document.getElementById('par-j1').value,j2=document.getElementById('par-j2').value,cat=document.getElementById('par-cat').value;
+  if(!j1||!j2){alert('Elige los dos jugadores.');return;}
+  if(j1===j2){alert('No puedes elegir el mismo jugador dos veces.');return;}
+  if(!S.parejas[S.tid])S.parejas[S.tid]=[];
+  S.parejas[S.tid].push({pid:Date.now(),j1:parseInt(j1),j2:parseInt(j2),cat,grupo:null});
+  save();rAParejas();rAGrupos();showToast('✅ Pareja creada');
+}
+function elimPareja(pid){
+  if(!confirm('¿Borrar esta pareja?'))return;
+  S.parejas[S.tid]=(S.parejas[S.tid]||[]).filter(p=>p.pid!==pid);
+  if(S.partidos[S.tid])S.partidos[S.tid]=S.partidos[S.tid].filter(p=>p.p1!==pid&&p.p2!==pid);
+  save();rAParejas();rAGrupos();rAResultados();showToast('🗑 Pareja borrada');
+}
+
+function rAGrupos(){
+  const el=document.getElementById('a-grupos');
+  const ps=prt();
+  if(!ps.length){el.innerHTML='<p style="color:#aaa;font-size:.85rem;">Crea parejas primero.</p>';return;}
+  let h='';
+  ['A','B','C'].forEach(cat=>{
+    const pcat=ps.filter(p=>p.cat===cat);if(!pcat.length)return;
+    h+=`<div style="margin-bottom:14px;"><div style="font-size:.82rem;font-weight:800;color:var(--v3);margin-bottom:7px;">Categoría ${cat} — ${pcat.length} pareja${pcat.length!==1?'s':''}:</div>`;
+    pcat.forEach(p=>{
+      const g=p.grupo;
+      h+=`<div class="prow" style="margin-bottom:5px;">
+        <span style="font-weight:700;font-size:.85rem;">${nj(p.j1)} & ${nj(p.j2)}</span>
+        <div style="display:flex;gap:5px;">
+          <button class="btn bsm ${g==='g1'?'bv':'bd'}" style="padding:5px 10px;font-size:.75rem;" onclick="asigGrupo(${p.pid},'g1')">Grupo 1</button>
+          <button class="btn bsm ${g==='g2'?'bv':'bd'}" style="padding:5px 10px;font-size:.75rem;" onclick="asigGrupo(${p.pid},'g2')">Grupo 2</button>
+        </div></div>`;
+    });
+    const g1c=pcat.filter(p=>p.grupo==='g1').length,g2c=pcat.filter(p=>p.grupo==='g2').length;
+    h+=`<div style="font-size:.75rem;color:#888;margin-top:3px;">Grupo 1: ${g1c} · Grupo 2: ${g2c}</div></div>`;
+  });
+  el.innerHTML=h;
+}
+function asigGrupo(pid,gid){
+  const p=prt().find(x=>x.pid===pid);if(!p)return;
+  const catCnt=prt().filter(x=>x.cat===p.cat&&x.grupo===gid).length;
+  if(catCnt>=4){showToast('⚠️ Máximo 4 parejas por grupo');return;}
+  p.grupo=gid;save();rAGrupos();
+}
+
+function generarCalendario(){
+  const ps=prt();
+  if(!ps.length){alert('Crea parejas primero.');return;}
+  if(ps.some(p=>!p.grupo)){alert('Asigna todas las parejas a Grupo 1 o Grupo 2 primero.');return;}
+  if(!confirm('¿Crear los partidos? Los partidos anteriores se borrarán.'))return;
+  if(!S.partidos[S.tid])S.partidos[S.tid]=[];
+  S.partidos[S.tid]=S.partidos[S.tid].filter(p=>p.fase!=='grupo');
+  ['A','B','C'].forEach(cat=>{
+    ['g1','g2'].forEach(gid=>{
+      const pids=ps.filter(p=>p.cat===cat&&p.grupo===gid).map(p=>p.pid);
+      if(pids.length>=2)S.partidos[S.tid].push(...rrPartidos(pids,cat,gid));
+    });
+  });
+  save();rAResultados();rPartidos();cerrarAdmin();showToast('✅ Partidos creados y publicados');
+}
+
+function rAResultados(){
+  const el=document.getElementById('a-resultados');
+  const todos=pt();
+  if(!todos.length){el.innerHTML='<p style="color:#aaa;font-size:.85rem;">Crea los partidos primero.</p>';return;}
+  const fases=[['grupo','Fase de grupos'],['semi','Semifinales'],['final','Final']];
+  let h='';
+  fases.forEach(([fase,lbl])=>{
+    const pf=todos.filter(p=>p.fase===fase);if(!pf.length)return;
+    h+=`<div style="font-size:.78rem;font-weight:800;color:var(--v3);margin:10px 0 6px;">${lbl}:</div>`;
+    pf.forEach(p=>{
+      h+=`<div class="prow" style="margin-bottom:6px;flex-wrap:wrap;gap:6px;">
+        <div style="flex:1;min-width:110px;">
+          <div style="font-size:.82rem;font-weight:700;">${np(p.p1)}</div>
+          <div style="font-size:.75rem;color:#888;">vs ${np(p.p2)}</div>
+          ${p.jugado?`<div style="font-size:.72rem;color:#155724;font-weight:700;">✅ ${p.s1} – ${p.s2}</div>`:''}
+        </div>
+        <div style="display:flex;align-items:center;gap:5px;">
+          <input type="number" class="score-inp" id="s1-${p.id}" placeholder="0" min="0" max="99" value="${p.jugado?p.s1:''}"/>
+          <span style="font-weight:700;color:#aaa;">–</span>
+          <input type="number" class="score-inp" id="s2-${p.id}" placeholder="0" min="0" max="99" value="${p.jugado?p.s2:''}"/>
+          <button class="btn bv bxs" onclick="guardarRes(${p.id})">💾</button>
+        </div>
+      </div>`;
+    });
+  });
+  const gDone=todos.filter(p=>p.fase==='grupo').length>0&&todos.filter(p=>p.fase==='grupo').every(p=>p.jugado);
+  const hasSemis=todos.some(p=>p.fase==='semi');
+  if(gDone&&!hasSemis)h+=`<button class="btn bd bsm" style="margin-top:10px;" onclick="generarSemis()">🥊 Generar Semifinales</button>`;
+  const sDone=todos.filter(p=>p.fase==='semi').length>0&&todos.filter(p=>p.fase==='semi').every(p=>p.jugado);
+  const hasFinal=todos.some(p=>p.fase==='final');
+  if(sDone&&!hasFinal)h+=`<button class="btn bd bsm" style="margin-top:10px;" onclick="generarFinal()">🏆 Generar Final</button>`;
+  el.innerHTML=h;
+}
+function guardarRes(partidoId){
+  const p=pt().find(x=>x.id===partidoId);if(!p)return;
+  const s1=parseInt(document.getElementById('s1-'+partidoId).value);
+  const s2=parseInt(document.getElementById('s2-'+partidoId).value);
+  if(isNaN(s1)||isNaN(s2)||s1<0||s2<0){alert('Escribe los dos marcadores.');return;}
+  if(s1===s2){alert('No puede terminar en empate. Revisa el marcador.');return;}
+  p.s1=s1;p.s2=s2;p.jugado=true;
+  save();rAResultados();rPartidos();showToast('✅ Resultado guardado');
+}
+
+function generarSemis(){
+  if(!confirm('¿Generar semifinales con los que clasificaron de cada grupo?'))return;
+  ['A','B','C'].forEach(cat=>{
+    const g1t=calcTabla(cat,'g1'),g2t=calcTabla(cat,'g2');
+    if(!g1t.length&&!g2t.length)return;
+    if(!S.partidos[S.tid])S.partidos[S.tid]=[];
+    if(g1t.length>=1&&g2t.length>=1){
+      const g1_1=g1t[0]?.pid,g2_1=g2t[0]?.pid;
+      const g1_2=g1t[1]?.pid,g2_2=g2t[1]?.pid;
+      const semis=[];
+      if(g1_1&&g2_2)semis.push({id:Date.now()+semis.length*7,cat,fase:'semi',grupoId:null,p1:g1_1,p2:g2_2,s1:null,s2:null,jugado:false});
+      if(g2_1&&g1_2)semis.push({id:Date.now()+semis.length*7+3,cat,fase:'semi',grupoId:null,p1:g2_1,p2:g1_2,s1:null,s2:null,jugado:false});
+      S.partidos[S.tid].push(...semis);
+    } else {
+      const t=g1t.length?g1t:g2t;
+      if(t.length>=2)S.partidos[S.tid].push({id:Date.now(),cat,fase:'final',grupoId:null,p1:t[0].pid,p2:t[1].pid,s1:null,s2:null,jugado:false});
+    }
+  });
+  save();rAResultados();rPartidos();showToast('✅ Semifinales generadas');
+}
+function generarFinal(){
+  if(!confirm('¿Generar la final con los ganadores de las semis?'))return;
+  ['A','B','C'].forEach(cat=>{
+    const semis=pt().filter(p=>p.cat===cat&&p.fase==='semi'&&p.jugado);
+    if(semis.length<2)return;
+    const g1=semis[0].s1>semis[0].s2?semis[0].p1:semis[0].p2;
+    const g2=semis[1].s1>semis[1].s2?semis[1].p1:semis[1].p2;
+    if(!S.partidos[S.tid])S.partidos[S.tid]=[];
+    S.partidos[S.tid].push({id:Date.now(),cat,fase:'final',grupoId:null,p1:g1,p2:g2,s1:null,s2:null,jugado:false});
+  });
+  save();rAResultados();rPartidos();showToast('✅ Final generada');
+}
+
 function crearTorneo(){
   const n=document.getElementById('tn').value.trim();
-  if(!n){alert('Escribe el nombre.');return;}
+  if(!n){alert('Escribe el nombre del torneo.');return;}
   const t={id:Date.now(),nombre:n,fecha:document.getElementById('tf').value,estado:document.getElementById('te').value};
   S.torneos.push(t);if(!S.tid)S.tid=t.id;save();
   document.getElementById('tn').value='';document.getElementById('tf').value='';
-  rAT();rSel();showToast(`✅ Torneo "${n}" creado`);
+  rAT();rSel();showToast('✅ Torneo creado');
 }
 function cambEst(id,v){const t=S.torneos.find(t=>t.id===id);if(t){t.estado=v;save();rSel();}}
-function elimT(id){if(!confirm('¿Eliminar este torneo?'))return;S.torneos=S.torneos.filter(t=>t.id!==id);S.jugadores=S.jugadores.filter(j=>j.tid!==id);if(S.tid===id)S.tid=S.torneos[0]?.id||null;save();rAT();rAJ();rSel();}
+function elimT(id){
+  if(!confirm('¿Borrar este torneo?'))return;
+  S.torneos=S.torneos.filter(t=>t.id!==id);S.jugadores=S.jugadores.filter(j=>j.tid!==id);
+  delete S.parejas[id];delete S.partidos[id];
+  if(S.tid===id)S.tid=S.torneos[0]?.id||null;
+  save();rAT();rSel();
+}
 function rAT(){
   const el=document.getElementById('a-torneos');
   if(!S.torneos.length){el.innerHTML='<p style="color:#aaa;font-size:.85rem;">Sin torneos.</p>';return;}
-  el.innerHTML=S.torneos.map(t=>`<div class="prow" style="margin-bottom:8px;"><div><strong style="font-size:.9rem;">${t.nombre}</strong><small style="display:block;color:#888;">${t.fecha||'Sin fecha'}</small></div><div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center;"><select onchange="cambEst(${t.id},this.value)" style="font-size:.78rem;padding:4px 7px;border-radius:7px;border:1px solid #ccc;font-family:Nunito,sans-serif;"><option value="abierto" ${t.estado==='abierto'?'selected':''}>✅ Abierto</option><option value="en-curso" ${t.estado==='en-curso'?'selected':''}>⚡ En curso</option><option value="cerrado" ${t.estado==='cerrado'?'selected':''}>🔒 Cerrado</option></select><button class="btn br bsm" onclick="elimT(${t.id})">🗑</button></div></div>`).join('');
-}
-function elimJ(id){if(!confirm('¿Eliminar este jugador?'))return;S.jugadores=S.jugadores.filter(j=>j.id!==id);delete S.votos[id];delete S.pagos[id];save();rAJ();}
-function rAJ(){
-  const el=document.getElementById('a-jugadores'),js=jt();
-  if(!js.length){el.innerHTML='<p style="color:#aaa;font-size:.85rem;">No hay jugadores.</p>';return;}
-  el.innerHTML=js.map(j=>`<div class="prow" style="margin-bottom:7px;"><div><strong style="font-size:.9rem;">${j.nombre}</strong><small style="display:block;color:#888;">${j.tel}</small></div><button class="btn br bsm" onclick="elimJ(${j.id})">🗑</button></div>`).join('');
+  el.innerHTML=S.torneos.map(t=>`
+    <div class="prow" style="margin-bottom:7px;">
+      <div><strong style="font-size:.9rem;">${t.nombre}</strong><small style="display:block;color:#888;">${t.fecha||'Sin fecha'}</small></div>
+      <div style="display:flex;gap:5px;align-items:center;">
+        <select onchange="cambEst(${t.id},this.value)" style="font-size:.75rem;padding:4px 6px;border-radius:7px;border:1px solid #ccc;font-family:Nunito,sans-serif;">
+          <option value="abierto" ${t.estado==='abierto'?'selected':''}>✅ Abierto</option>
+          <option value="en-curso" ${t.estado==='en-curso'?'selected':''}>⚡ En curso</option>
+          <option value="cerrado" ${t.estado==='cerrado'?'selected':''}>🔒 Cerrado</option>
+        </select>
+        <button class="btn br bxs" onclick="elimT(${t.id})">🗑</button>
+      </div>
+    </div>`).join('');
 }
 function borrarTodo(){
-  if(!confirm('⚠️ ¿Borrar TODOS los datos en la nube?'))return;
-  S={torneos:[],jugadores:[],votos:{},pagos:{},tid:null,cfg:{monto:200,banco:'',benef:'',clabe:'',cuenta:'',mplink:''}};
+  if(!confirm('⚠️ ¿Borrar TODO? Esto no se puede deshacer.'))return;
+  S={cfg:{monto:200,banco:'',benef:'',clabe:'',cuenta:'',mplink:''},torneos:[],tid:null,jugadores:[],votos:{},pagos:{},catFinal:{},parejas:{},partidos:{}};
   REF.remove().then(()=>location.reload());
 }
 
-// ===================================================
-// INICIO
-// ===================================================
 load();
 </script>
-
 </body>
 </html>
